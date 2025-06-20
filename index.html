@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 4: Planeación, Programación y Presupuestación</title>
     <style>
+        /* Importa la fuente Noto Sans desde Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
         
+        /* Reinicia márgenes y rellenos, y establece el modelo de caja */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        /* Estilos generales del cuerpo del documento */
         body {
             font-family: 'Noto Sans', sans-serif;
             font-size: 10pt;
             line-height: 1.6;
             color: #333;
             background: white;
-            max-width: 210mm;
-            margin: 0 auto;
-            padding: 20mm;
+            max-width: 210mm; /* Ancho máximo para simular una hoja A4 */
+            margin: 0 auto; /* Centra el contenido */
+            padding: 20mm; /* Relleno alrededor del contenido */
         }
         
+        /* Estilos para la portada */
         .cover {
             text-align: center;
-            page-break-after: always;
+            page-break-after: always; /* Salto de página después de la portada */
             padding: 50mm 0;
-            border: 2px solid #8B4513;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #8B4513; /* Borde con color corporativo */
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Degradado suave */
             margin-bottom: 20mm;
         }
         
@@ -65,8 +69,9 @@
             margin-top: 20mm;
         }
         
+        /* Estilos para la Tabla de Contenidos (TOC) */
         .toc {
-            page-break-after: always;
+            page-break-after: always; /* Salto de página después del índice */
             margin-bottom: 20mm;
         }
         
@@ -101,6 +106,7 @@
             color: #666;
         }
         
+        /* Estilos para los títulos de sección (h1, h2, h3, h4) */
         h1 {
             color: #8B4513;
             font-size: 18pt;
@@ -108,11 +114,11 @@
             margin: 15mm 0 8mm 0;
             padding-bottom: 2mm;
             border-bottom: 2px solid #8B4513;
-            page-break-before: always;
+            page-break-before: always; /* Salto de página antes de cada h1 */
         }
         
         h1:first-of-type {
-            page-break-before: auto;
+            page-break-before: auto; /* El primer h1 no tiene salto de página */
         }
         
         h2 {
@@ -138,20 +144,22 @@
             margin: 6mm 0 3mm 0;
         }
         
+        /* Estilos para párrafos */
         p {
             text-align: justify;
             margin-bottom: 4mm;
-            text-indent: 5mm;
+            text-indent: 5mm; /* Sangría en la primera línea */
         }
         
         .no-indent {
-            text-indent: 0;
+            text-indent: 0; /* Elimina la sangría */
         }
         
+        /* Estilos para cajas de conceptos */
         .concept-box {
             background: #f8f9fa;
             border: 1px solid #dee2e6;
-            border-left: 4px solid #8B4513;
+            border-left: 4px solid #8B4513; /* Borde lateral resaltado */
             padding: 5mm;
             margin: 5mm 0;
             border-radius: 2mm;
@@ -168,10 +176,11 @@
             margin-bottom: 2mm;
         }
         
+        /* Estilos para cajas de ejemplos */
         .example-box {
             background: #e8f4f8;
             border: 1px solid #bee5eb;
-            border-left: 4px solid #17a2b8;
+            border-left: 4px solid #17a2b8; /* Borde lateral resaltado */
             padding: 5mm;
             margin: 5mm 0;
             border-radius: 2mm;
@@ -183,10 +192,11 @@
             margin-bottom: 2mm;
         }
         
+        /* Estilos para cajas de advertencia */
         .warning-box {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #ffc107; /* Borde lateral resaltado */
             padding: 5mm;
             margin: 5mm 0;
             border-radius: 2mm;
@@ -198,10 +208,11 @@
             margin-bottom: 2mm;
         }
         
+        /* Estilos para listas de verificación (checklist) */
         .checklist {
             background: #d4edda;
             border: 1px solid #c3e6cb;
-            border-left: 4px solid #28a745;
+            border-left: 4px solid #28a745; /* Borde lateral resaltado */
             padding: 5mm;
             margin: 5mm 0;
             border-radius: 2mm;
@@ -222,6 +233,7 @@
             margin-bottom: 2mm;
         }
         
+        /* Estilos para diagramas de proceso (horizontal) */
         .process-diagram {
             background: white;
             border: 2px solid #8B4513;
@@ -249,6 +261,7 @@
             color: #8B4513;
         }
         
+        /* Estilos para tablas */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -269,6 +282,7 @@
             color: #495057;
         }
         
+        /* Estilos para resaltar texto */
         .highlight {
             background: #fff3cd;
             padding: 1mm 2mm;
@@ -276,6 +290,7 @@
             font-weight: 500;
         }
         
+        /* Estilos para referencias legales */
         .legal-ref {
             font-size: 8pt;
             color: #666;
@@ -285,12 +300,14 @@
             border-top: 1px solid #dee2e6;
         }
         
+        /* Estilos para notas al pie (no usadas directamente en este código, pero útiles) */
         .footnote {
             font-size: 8pt;
             color: #666;
             margin-top: 2mm;
         }
         
+        /* Estilos para listas (ul, ol) */
         ul, ol {
             padding-left: 8mm;
             margin: 3mm 0;
@@ -300,6 +317,7 @@
             margin-bottom: 2mm;
         }
         
+        /* Estilos para líneas de tiempo */
         .timeline {
             border-left: 3px solid #8B4513;
             padding-left: 8mm;
@@ -328,6 +346,7 @@
             margin-bottom: 1mm;
         }
 
+        /* Estilos para diagramas de flujo (vertical) */
         .flow-diagram {
             display: flex;
             flex-direction: column;
@@ -359,6 +378,7 @@
             margin: 1mm 0;
         }
         
+        /* Estilos para impresión */
         @media print {
             body {
                 margin: 0;
@@ -370,19 +390,20 @@
             }
             
             .concept-box, .example-box, .warning-box, .checklist {
-                page-break-inside: avoid;
+                page-break-inside: avoid; /* Evita que estas cajas se corten entre páginas */
             }
         }
     </style>
 </head>
 <body>
-    <!-- Portada -->
+    <!-- Portada del Manual -->
     <div class="cover">
         <h1>Manual del Taller en Materia Presupuestaria y Gasto</h1>
         <h2>Capítulo 4</h2>
         <div class="subtitle">Planeación, Programación y Presupuestación</div>
         <div style="margin: 20mm 0;">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzhCNDUxMyIgcng9IjEwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TSENQPC90ZXh0Pgo8L3N2Zz4K" alt="SHCP Logo" style="width: 60px; height: 60px;">
+            <!-- Logo SHCP en SVG base64 para evitar dependencias externas -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzhCNDUxMyIgcng9IjEwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TSENQPC90ZXh0Pgo8L3N2Zz4K" alt="Logo de la Secretaría de Hacienda y Crédito Público (SHCP)" style="width: 60px; height: 60px;">
         </div>
         <div class="framework">
             Marco Normativo 2025-2030<br>
@@ -391,11 +412,11 @@
         </div>
     </div>
 
-    <!-- Índice -->
+    <!-- Índice del Capítulo 4 -->
     <nav class="toc" role="navigation" aria-labelledby="toc-heading">
         <h2 id="toc-heading">Índice del Capítulo 4</h2>
         <div class="toc-item level-1">
-            <a href="#seccion-4-1">4.1 Conceptos Clave Fundamentales</a>
+            <a href="#seccion-4-1">4.1 Conceptos Clave Fundamentales del Proceso Presupuestario</a>
             <span>5</span>
         </div>
         <div class="toc-item level-2">
@@ -407,12 +428,12 @@
             <span>7</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-1-3">4.1.3 Instrumentos de Planeación</a>
+            <a href="#subseccion-4-1-3">4.1.3 Instrumentos de Planeación y Programación Institucional</a>
             <span>9</span>
         </div>
         
         <div class="toc-item level-1">
-            <a href="#seccion-4-2">4.2 Plan Nacional de Desarrollo y Programas Derivados</a>
+            <a href="#seccion-4-2">4.2 Alineación con el Plan Nacional de Desarrollo y Programas Derivados</a>
             <span>11</span>
         </div>
         <div class="toc-item level-2">
@@ -424,16 +445,16 @@
             <span>13</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-2-3">4.2.3 Alineación Estratégica Institucional</a>
+            <a href="#subseccion-4-2-3">4.2.3 Proceso de Alineación Estratégica Institucional</a>
             <span>15</span>
         </div>
         
         <div class="toc-item level-1">
-            <a href="#seccion-4-3">4.3 Planeación Estratégica Institucional</a>
+            <a href="#seccion-4-3">4.3 Planeación Estratégica Institucional: Herramientas y Aplicación</a>
             <span>17</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-3-1">4.3.1 Metodología de Marco Lógico</a>
+            <a href="#subseccion-4-3-1">4.3.1 Matriz de Marco Lógico (MML)</a>
             <span>17</span>
         </div>
         <div class="toc-item level-2">
@@ -441,12 +462,12 @@
             <span>20</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-3-3">4.3.3 Integración de la Estrategia Organizacional</a>
+            <a href="#subseccion-4-3-3">4.3.3 Integración de la Estrategia Organizacional y su Vínculo con la Planeación Presupuestaria</a>
             <span>23</span>
         </div>
         
         <div class="toc-item level-1">
-            <a href="#seccion-4-4">4.4 Integración del Proyecto de PEF</a>
+            <a href="#seccion-4-4">4.4 Integración del Proyecto de Presupuesto de Egresos de la Federación (PEF)</a>
             <span>25</span>
         </div>
         <div class="toc-item level-2">
@@ -454,24 +475,24 @@
             <span>25</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-4-2">4.4.2 Clasificaciones Presupuestarias</a>
+            <a href="#subseccion-4-4-2">4.4.2 Clasificaciones Presupuestarias y su Relevancia para su Entidad</a>
             <span>28</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-4-3">4.4.3 Formulación de Solicitud de Recursos</a>
+            <a href="#subseccion-4-4-3">4.4.3 Formulación de la Solicitud de Recursos: El Anteproyecto Detallado</a>
             <span>31</span>
         </div>
         
         <div class="toc-item level-1">
-            <a href="#seccion-4-5">4.5 Techos Presupuestarios y Anteproyecto</a>
+            <a href="#seccion-4-5">4.5 Techos Presupuestarios y Construcción del Anteproyecto Final</a>
             <span>34</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-5-1">4.5.1 Determinación de Techos y Límites</a>
+            <a href="#subseccion-4-5-1">4.5.1 Determinación de Techos Presupuestarios y Límites para su Entidad</a>
             <span>34</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-5-2">4.5.2 Construcción del Anteproyecto</a>
+            <a href="#subseccion-4-5-2">4.5.2 Construcción del Anteproyecto Final de Presupuesto para su Entidad</a>
             <span>36</span>
         </div>
         
@@ -480,24 +501,24 @@
             <span>39</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-6-1">4.6.1 Cronograma Legal del PEF</a>
+            <a href="#subseccion-4-6-1">4.6.1 Cronograma Legal del Proceso de Aprobación del PEF</a>
             <span>39</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-6-2">4.6.2 Procesos de Ajuste y Validación Interna</a>
+            <a href="#subseccion-4-6-2">4.6.2 Procesos de Ajuste y Validación Interna del Presupuesto Aprobado</a>
             <span>41</span>
         </div>
         
         <div class="toc-item level-1">
-            <a href="#seccion-4-7">4.7 Registro en la Cartera de Proyectos de Inversión</a>
+            <a href="#seccion-4-7">4.7 Registro en la Cartera de Proyectos de Inversión (CPI)</a>
             <span>43</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-7-1">4.7.1 Requisitos y Formatos Oficiales</a>
+            <a href="#subseccion-4-7-1">4.7.1 Requisitos y Formatos Oficiales para Proyectos de Inversión</a>
             <span>43</span>
         </div>
         <div class="toc-item level-2">
-            <a href="#subseccion-4-7-2">4.7.2 Proceso de Inscripción y Seguimiento</a>
+            <a href="#subseccion-4-7-2">4.7.2 Proceso de Inscripción y Seguimiento de Proyectos de Inversión</a>
             <span>45</span>
         </div>
         
@@ -511,7 +532,7 @@
         </div>
     </nav>
 
-    <!-- Contenido Principal -->
+    <!-- Contenido Principal del Capítulo 4 -->
     <h1 id="capitulo-4-heading">Capítulo 4: Planeación, Programación y Presupuestación</h1>
 
     <div class="concept-box" role="region" aria-labelledby="objetivo-capitulo">
@@ -521,12 +542,13 @@
 
     <div class="warning-box" role="region" aria-labelledby="contexto-entidades-nuevas">
         <h4 id="contexto-entidades-nuevas">Contexto para Entidades de Nueva Creación</h4>
-        <p>Este capítulo está dirigido específicamente a entidades paraestatales de reciente creación que requieren establecer por primera vez sus procesos de planeación, programación y presupuestación bajo el marco normativo vigente 2025-2030. Se asume que la entidad cuenta con su decreto de creación pero necesita desarrollar sus capacidades institucionales en materia presupuestaria.</p>
+        <p>Este capítulo está dirigido específicamente a entidades paraestatales de reciente creación que requieren establecer por primera vez sus procesos de planeación, programación y presupuestación bajo el marco normativo vigente. Se asume que la entidad cuenta con su decreto de creación, pero necesita desarrollar sus capacidades institucionales en materia presupuestaria para el periodo 2025-2030.</p>
     </div>
 
     <h2 id="seccion-ciclo-presupuestario">El Ciclo Presupuestario Federal: Visión General</h2>
     <p>El ejercicio del presupuesto público federal en México se rige por un ciclo que abarca siete etapas interconectadas, garantizando un proceso ordenado y transparente en el uso de los recursos. Estas etapas son: Planeación, Programación, Presupuestación, Ejercicio y Control, Seguimiento, Evaluación y Rendición de Cuentas. En este capítulo, nos enfocaremos en las tres primeras etapas, fundamentales para que su entidad paraestatal de nueva creación inicie sus operaciones de manera sólida y alineada a la normativa vigente.</p>
 
+    <!-- Diagrama de flujo del ciclo presupuestario federal -->
     <div class="flow-diagram" role="region" aria-labelledby="flujo-ciclo-presupuestario">
         <h4 id="flujo-ciclo-presupuestario">Flujo de Proceso de las 7 Etapas en Materia Presupuestaria y Gasto</h4>
         <div class="flow-step" style="background: #8B4513;">1. Planeación: PND y sus programas derivados, Programas Institucionales</div>
@@ -551,24 +573,28 @@
 
     <h3 id="subseccion-4-1-1">4.1.1 Definiciones Base del Proceso PPP</h3>
 
+    <!-- Concepto de Planeación -->
     <div class="concept-box" role="region" aria-labelledby="concepto-planeacion">
         <h4 id="concepto-planeacion">Planeación</h4>
-        <p>Es la etapa inicial donde se establecen los objetivos, metas y acciones a los cuales se deberán enfocar los recursos públicos. En México, el principal instrumento de planeación es el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo (PND)</a>, del cual se derivan programas sectoriales, especiales, institucionales y regionales. Para una entidad paraestatal de nueva creación, la planeación implica traducir los objetivos nacionales y sectoriales en objetivos institucionales específicos, medibles y alcanzables, conforme a lo estipulado en la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=12" target="_blank">Ley Orgánica de la Administración Pública Federal (LOAPF)</a> y la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">Ley Federal de las Entidades Paraestatales (LFEP)</a>.</p>
+        <p>Es la etapa inicial donde se establecen los objetivos, metas y acciones a los cuales se deberán enfocar los recursos públicos. En México, el principal instrumento de planeación es el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo (PND) 2025-2030</a>, del cual se derivan programas sectoriales, especiales, institucionales y regionales. Para una entidad paraestatal de nueva creación, la planeación implica traducir los objetivos nacionales y sectoriales en objetivos institucionales específicos, medibles y alcanzables, conforme a lo estipulado en la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=12" target="_blank">Ley Orgánica de la Administración Pública Federal (LOAPF), Artículo 12</a> y la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">Ley Federal de las Entidades Paraestatales (LFEP), Artículo 5</a>.</p>
         <p class="no-indent"><strong>Producto normado:</strong> <a href="#programa-institucional">Programa Institucional (PI)</a>. Exigido por el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=6" target="_blank">Artículo 21 de la LFEP</a>.</p>
     </div>
 
+    <!-- Concepto de Programación -->
     <div class="concept-box" role="region" aria-labelledby="concepto-programacion">
         <h4 id="concepto-programacion">Programación</h4>
         <p>Una vez definidos los objetivos en la etapa de Planeación, se procede a la Programación, donde se definen los programas presupuestarios que tendrán a cargo las dependencias y entidades del Gobierno Federal, así como los recursos necesarios para cumplir sus objetivos. Esta etapa es crucial, ya que en ella se materializan las acciones y proyectos que su entidad llevará a cabo. La Programación concluye cuando la SHCP envía el Paquete Económico al Congreso de la Unión, con la propuesta de cuánto dinero se estima recaudar y cómo se propone distribuir estos recursos. Para la entidad paraestatal, significa estructurar operativamente sus actividades en programas presupuestarios específicos y metas físicas concretas, de acuerdo con el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>.</p>
         <p class="no-indent"><strong>Producto normado:</strong> <a href="#concepto-poa">Programa Operativo Anual (POA)</a>, Matriz de Indicadores para Resultados (MIR). Exigidos por el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">Artículo 27 de la Ley Federal de Presupuesto y Responsabilidad Hacendaria (LFPRH)</a> y el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>.</p>
     </div>
 
+    <!-- Concepto de Presupuestación -->
     <div class="concept-box" role="region" aria-labelledby="concepto-presupuestacion">
         <h4 id="concepto-presupuestacion">Presupuestación</h4>
         <p>Siguiendo el proceso de Programación, la etapa de Presupuestación establece la cantidad, fuente de financiamiento y distribución de los recursos aprobados por la Cámara de Diputados mediante Decreto. En esta fase, se presentan los recursos autorizados en la Ley de Ingresos y las asignaciones detalladas en el Presupuesto de Egresos de la Federación (PEF) para los distintos poderes, organismos autónomos, así como las transferencias a los gobiernos estatales y municipales. Su entidad recibirá un techo presupuestario que deberá respetar al construir su anteproyecto, conforme al <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">Artículo 42 de la LFPRH</a>.</p>
         <p class="no-indent"><strong>Producto normado:</strong> Anteproyecto de Presupuesto de Egresos de la Federación. Exigido por el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=20" target="_blank">Artículo 47 de la LFPRH</a>.</p>
     </div>
 
+    <!-- Diagrama de flujo del PPP detallado -->
     <div class="process-diagram" role="region" aria-labelledby="flujo-ppp-detallado">
         <h4 id="flujo-ppp-detallado">Flujo de Proceso de Planeación, Programación y Presupuestación</h4>
         <div style="text-align: left; font-size: 9pt;">
@@ -583,6 +609,7 @@
         </div>
     </div>
 
+    <!-- Ejemplo práctico del Instituto Nacional de Desarrollo Tecnológico -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-instituto-desarrollo">
         <h4 id="ejemplo-instituto-desarrollo">Ejemplo Práctico: Instituto Nacional de Desarrollo Tecnológico (Entidad Ficticia)</h4>
         <p>Para ilustrar estas etapas, imaginemos un nuevo <strong>Instituto Nacional de Desarrollo Tecnológico</strong>:</p>
@@ -595,18 +622,21 @@
 
     <p>Aunque las etapas de Evaluación y Rendición de Cuentas se abordarán a profundidad en capítulos posteriores, es fundamental que, como entidad paraestatal de nueva creación, su organización incorpore desde la planeación y programación la visión del Presupuesto basado en Resultados (PbR) y el Sistema de Evaluación del Desempeño (SED). Estos constituyen el modelo de gestión pública que vincula la asignación de recursos con los resultados obtenidos, establecido en los <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">artículos 27 y 110 de la Ley Federal de Presupuesto y Responsabilidad Hacendaria (LFPRH)</a>. Esto asegura que la entidad no solo gaste recursos, sino que genere valor público.</p>
 
+    <!-- Concepto de Presupuesto Basado en Resultados (PbR) -->
     <div class="concept-box" role="region" aria-labelledby="concepto-pbr">
         <h4 id="concepto-pbr">Presupuesto basado en Resultados (PbR)</h4>
         <p>Es una metodología que incorpora de manera sistemática consideraciones sobre los resultados y el impacto de la aplicación de los recursos en los procesos de asignación presupuestaria, ejercicio, seguimiento y evaluación. Su esencia radica en identificar los bienes y servicios (productos) que las instituciones públicas proporcionan a la sociedad para el logro de resultados, y en establecer un sistema de indicadores que permita monitorear el desempeño gubernamental. Esto es clave para su entidad, ya que desde el primer día deberá orientar su actuar hacia el logro de resultados concretos para la ciudadanía.</p>
         <p class="no-indent"><strong>Fuente:</strong> <a href="https://www.transparenciapresupuestaria.gob.mx/es/PTP/PbR_SED" target="_blank">Transparencia Presupuestaria, SHCP - PbR y SED</a>.</p>
     </div>
 
+    <!-- Concepto de Sistema de Evaluación del Desempeño (SED) -->
     <div class="concept-box" role="region" aria-labelledby="concepto-sed">
         <h4 id="concepto-sed">Sistema de Evaluación del Desempeño (SED)</h4>
         <p>Es el conjunto de elementos metodológicos que permiten realizar una valoración objetiva del desempeño de los programas y proyectos. Se basa en los principios de verificación del grado de cumplimiento de metas y objetivos, utilizando indicadores estratégicos y de gestión para conocer el impacto social de los programas y proyectos. Es a través del SED que su entidad podrá demostrar la efectividad de su gasto y el impacto positivo en la sociedad, tal como lo marca el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=44" target="_blank">Artículo 110 de la LFPRH</a>.</p>
         <p class="no-indent"><strong>Fuente:</strong> <a href="https://www.transparenciapresupuestaria.gob.mx/es/PTP/PbR_SED" target="_blank">Transparencia Presupuestaria, SHCP - PbR y SED</a>.</p>
     </div>
 
+    <!-- Tabla de Tipos de Indicadores en PbR y SED -->
     <table role="table" aria-labelledby="indicadores-pbr-sed">
         <caption id="indicadores-pbr-sed" style="visibility: hidden; position: absolute;">Tabla de Tipos de Indicadores en PbR y SED</caption>
         <tr>
@@ -643,17 +673,18 @@
         </tr>
     </table>
 
+    <!-- Lista de Verificación para la Incorporación del PbR-SED -->
     <div class="checklist" role="region" aria-labelledby="lista-pbr-sed">
         <h4 id="lista-pbr-sed">Lista de Verificación: Elementos Clave para la Incorporación del PbR-SED desde la Planeación</h4>
         <p>Para asegurar una sólida incorporación del enfoque de resultados, considere los siguientes puntos al diseñar sus programas y proyectos:</p>
         <ul>
-            <li>✓ Definición clara de objetivos estratégicos y específicos (<span class="highlight">Práctica Normada: Art. 25 LFPRH</span>).</li>
-            <li>✓ Identificación de poblaciones o áreas de enfoque beneficiarias (<span class="highlight">Sugerencia IA, buena práctica</span>).</li>
+            <li>✓ Definición clara de objetivos estratégicos y específicos (<span class="highlight">Práctica Normada: Art. 25 de la Ley Federal de Presupuesto y Responsabilidad Hacendaria, y Art. 4, Fracción III de la Ley General de Contabilidad Gubernamental</span>).</li>
+            <li>✓ Identificación de poblaciones o áreas de enfoque beneficiarias (<span class="highlight">Práctica Normada: Manual de Programación y Presupuesto PEF 2025, así como en las fichas de diseño de programas del CONEVAL</span>).</li>
             <li>✓ Establecimiento de metas cuantificables y realistas (<span class="highlight">Práctica Normada: Manual de Programación y Presupuesto PEF 2025</span>).</li>
-            <li>✓ Diseño de indicadores pertinentes y verificables (<span class="highlight">Práctica Normada: Art. 27 LFPRH, Lineamientos de CONEVAL</span>).</li>
+            <li>✓ Diseño de indicadores pertinentes y verificables (<span class="highlight">Práctica Normada: Art. 27 LFPRH, Lineamientos de Evaluación del Desempeño del CONEVAL</span>).</li>
             <li>✓ Vinculación lógica entre los insumos, actividades, productos y resultados esperados (<span class="highlight">Práctica Normada: Manual de Programación y Presupuesto PEF 2025</span>).</li>
             <li>✓ Definición de medios de verificación confiables y accesibles (<span class="highlight">Práctica Normada: Art. 27 LFPRH</span>).</li>
-            <li>✓ Identificación de supuestos y riesgos que podrían afectar el cumplimiento de los objetivos (<span class="highlight">Sugerencia IA, buena práctica en gestión de proyectos</span>).</li>
+            <li>✓ Identificación de supuestos y riesgos que podrían afectar el cumplimiento de los objetivos (<span class="highlight">Práctica Normada: Manual de Programación y Presupuesto PEF 2025, sección de diseño de la MIR</span>).</li>
         </ul>
     </div>
 
@@ -661,39 +692,45 @@
 
     <p>Los instrumentos de planeación y programación son herramientas metodológicas que permiten a su entidad estructurar y organizar su intervención pública de manera coherente, medible y evaluable. Para las entidades paraestatales de nueva creación, es fundamental comprender y aplicar correctamente estos instrumentos, ya que son la base para solicitar y justificar recursos, así como para la rendición de cuentas.</p>
 
+    <!-- Concepto de Programa Institucional (PI) -->
     <div class="concept-box" role="region" aria-labelledby="concepto-programa-institucional">
         <h4 id="concepto-programa-institucional">Programa Institucional (PI)</h4>
-        <p>Es el instrumento de planeación de mediano plazo que cada entidad paraestatal debe elaborar, conforme a lo establecido en el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=6" target="_blank">Artículo 21 de la Ley Federal de las Entidades Paraestatales (LFEP)</a>. Este programa debe alinearse con el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo (PND)</a> y el programa sectorial correspondiente. El PI detalla los objetivos, estrategias y metas específicas que su entidad perseguirá durante el sexenio, y es la base para la formulación de los programas operativos anuales y la solicitud presupuestaria.</p>
+        <p>Es el instrumento de planeación de mediano plazo que cada entidad paraestatal debe elaborar, conforme a lo establecido en el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=6" target="_blank">Artículo 21 de la Ley Federal de las Entidades Paraestatales (LFEP)</a>. Este programa debe alinearse con el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo (PND) 2025-2030</a> y el programa sectorial correspondiente. El PI detalla los objetivos, estrategias y metas específicas que su entidad perseguirá durante el sexenio, y es la base para la formulación de los programas operativos anuales y la solicitud presupuestaria.</p>
     </div>
 
+    <!-- Concepto de Programa Operativo Anual (POA) -->
     <div class="concept-box" role="region" aria-labelledby="concepto-poa">
         <h4 id="concepto-poa">Programa Operativo Anual (POA)</h4>
         <p>Una vez que el Programa Institucional está definido, el Programa Operativo Anual (POA) se convierte en el instrumento de planeación de corto plazo que operacionaliza los objetivos y estrategias en metas, actividades y recursos específicos para un ejercicio fiscal determinado. Incluye la programación física, financiera y calendarización de actividades, detallando "qué se hará", "cuándo se hará", "quién lo hará" y "con qué recursos". El POA es un documento dinámico que sirve de guía para la ejecución diaria de las operaciones de su entidad y se vincula directamente con la <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a>. Su elaboración es una práctica fundamental para la gestión eficiente, según lo indicado en el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>.</p>
     </div>
 
+    <!-- Concepto de Analítico de la Clave de Entidad Paraestatal -->
     <div class="concept-box" role="region" aria-labelledby="concepto-analitico-clave">
         <h4 id="concepto-analitico-clave">Analítico de la Clave de Entidad Paraestatal</h4>
         <p>Toda entidad paraestatal debe contar con una clave de identificación única que la sitúa dentro de la estructura administrativa federal y la vincula con su programa presupuestario. Esta clave es fundamental para los registros contables y presupuestarios. Su entidad será clasificada dentro del sector paraestatal federal, lo que determina su régimen jurídico y sus obligaciones presupuestarias, según lo dispuesto en la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=2" target="_blank">Ley Federal de las Entidades Paraestatales (LFEP)</a> y el <a href="https://www.gob.mx/cms/uploads/attachment/file/971705/MCGSPF_2025_07_III_Clasificacion_del_Sector_Paraestatal_Federal.pdf" target="_blank">Manual de Clasificación del Gasto del Sector Paraestatal Federal (MCGSPF) 2025</a>. Este analítico es crucial para la integración del proyecto de PEF, ya que identifica inequívocamente a su entidad como Unidad Responsable.</p>
     </div>
 
+    <!-- Concepto de Matriz de Indicadores para Resultados (MIR) -->
     <div class="concept-box" role="region" aria-labelledby="definicion-mir">
         <h4 id="definicion-mir">Matriz de Indicadores para Resultados (MIR)</h4>
         <p>Es la herramienta principal para la planificación orientada a resultados en el sector público mexicano. La MIR resume los componentes clave de un programa presupuestario en una matriz que relaciona los objetivos (Fin, Propósito, Componentes y Actividades) con sus respectivos Indicadores, Medios de Verificación y Supuestos. Su uso es obligatorio para todos los programas presupuestarios, conforme al <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">Artículo 27 de la Ley Federal de Presupuesto y Responsabilidad Hacendaria (LFPRH)</a> y lo detallado en el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>. Esta matriz permite a su entidad no solo planificar, sino también comunicar de forma clara sus expectativas de logro y cómo las medirá.</p>
     </div>
 
+    <!-- Concepto de Ficha Técnica de Indicadores -->
     <div class="concept-box" role="region" aria-labelledby="concepto-ficha-indicadores">
         <h4 id="concepto-ficha-indicadores">Ficha Técnica de Indicadores</h4>
         <p>Cada indicador definido en la MIR debe contar con una Ficha Técnica, que es un documento que especifica sus características técnicas: nombre, definición, método de cálculo, unidad de medida, frecuencia de medición, línea base, metas, dimensión a medir (eficacia, eficiencia, economía, calidad), medios de verificación, y supuestos relevantes. Estas fichas son esenciales para asegurar la transparencia, la coherencia y la rigurosidad en la medición del desempeño de su entidad, tal como se establece en los lineamientos del <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Consejo Nacional de Evaluación de la Política de Desarrollo Social (CONEVAL)</a>.</p>
     </div>
 
+    <!-- Caja de advertencia sobre errores comunes en planeación y programación -->
     <div class="warning-box" role="region" aria-labelledby="errores-instrumentos-planeacion">
         <h4 id="errores-instrumentos-planeacion">Errores Comunes en Entidades de Nueva Creación en la Planeación y Programación</h4>
         <p>Como entidad de reciente creación, es común enfrentar desafíos al formular sus instrumentos de planeación. Aquí algunos errores frecuentes y recomendaciones para evitarlos:</p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
-            <li><strong>1. Objetivos demasiado amplios o ambiguos:</strong> Definir objetivos que no son específicos, medibles o temporalmente definidos. <span class="highlight">(Sugerencia IA, buena práctica)</span></li>
-            <li><strong>2. Indicadores inadecuados o no pertinentes:</strong> Usar indicadores que no reflejan realmente el logro del objetivo o que no son factibles de medir con los recursos disponibles. <span class="highlight">(Práctica Normada: Art. 27 LFPRH)</span></li>
+            <li><strong>1. Objetivos demasiado amplios o ambiguos:</strong> Definir objetivos que no son específicos, medibles o temporalmente definidos, dificultando la evaluación de resultados. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Manual de Programación y Presupuesto PEF 2025)</span></li>
+            <li><strong>2. Indicadores inadecuados o no pertinentes:</strong> Usar indicadores que no reflejan realmente el logro del objetivo o que no son factibles de medir con los recursos disponibles. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Lineamientos de Evaluación del Desempeño del CONEVAL)</span></li>
             <li><strong>3. Falta de línea base:</strong> No establecer una situación inicial contra la cual medir el progreso. Sin una línea base, es imposible demostrar el cambio generado por las acciones de su entidad. <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025)</span></li>
-            <li><strong>4. Metas irreales o poco ambiciosas:</strong> Proponer metas que no son alcanzables con los recursos y capacidades, o que son demasiado bajas y no impulsan la mejora continua. <span class="highlight">(Sugerencia IA, buena práctica)</span></li>
+            <li><strong>4. Metas irreales o poco ambiciosas:</strong> Proponer metas que no son alcanzables con los recursos y capacidades, o que son demasiado bajas y no impulsan la mejora continua. <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025, sección de diseño de la MIR)</span></li>
             <li><strong>5. Desarticulación entre instrumentos:</strong> No vincular adecuadamente los objetivos del Programa Institucional con los programas presupuestarios, la MIR y el POA. Esta desarticulación genera incongruencias en la solicitud y el ejercicio del presupuesto. <span class="highlight">(Práctica Normada: Art. 21 LFEP, Manual de Programación y Presupuesto PEF 2025)</span></li>
         </ul>
     </div>
@@ -706,6 +743,7 @@
 
     <p>El <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo (PND) 2025-2030</a> constituye el documento rector de la planeación democrática en México. Es crucial que su entidad lo consulte y comprenda a fondo, ya que define la ruta del desarrollo nacional. Para una entidad paraestatal de nueva creación, es fundamental comprender su estructura y objetivos para lograr una alineación estratégica efectiva desde sus primeros pasos.</p>
 
+    <!-- Concepto de Estructura del PND -->
     <div class="concept-box" role="region" aria-labelledby="estructura-pnd">
         <h4 id="estructura-pnd">Estructura del PND 2025-2030</h4>
         <p>El PND se organiza en torno a ejes temáticos que abordan las prioridades nacionales. Cada eje contiene objetivos prioritarios, estrategias nacionales y líneas de acción específicas que deben ser consideradas por las entidades paraestatales en su proceso de alineación institucional. Para el PND 2025-2030, se destacan los siguientes ejes:</p>
@@ -720,6 +758,7 @@
         </div>
     </div>
 
+    <!-- Ejemplo de Alineación con el PND -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-alineacion-pnd">
         <h4 id="ejemplo-alineacion-pnd">Ejemplo de Alineación con el PND: Instituto de Innovación Tecnológica (Ficticio)</h4>
         <p>Supongamos que el <strong>Instituto de Innovación Tecnológica</strong> se alinea al <strong>Eje del PND "Economía"</strong>, específicamente al <strong>Objetivo Prioritario: "Promover la innovación y el desarrollo tecnológico"</strong>. Su:</p>
@@ -727,6 +766,7 @@
         <p><strong>Indicadores de Contribución:</strong> Podría medir su impacto con indicadores como el "Número de patentes registradas" o "Porcentaje de empresas beneficiadas con transferencia tecnológica", que reflejan su contribución al objetivo prioritario del PND.</p>
     </div>
 
+    <!-- Cronología de Implementación del PND -->
     <div class="timeline" role="region" aria-labelledby="cronologia-pnd">
         <h4 id="cronologia-pnd">Cronología Relevante de Implementación del PND para Entidades Paraestatales</h4>
         <p>Aunque el PND es un documento sexenal, su implementación y seguimiento requieren una atención constante por parte de su entidad:</p>
@@ -755,6 +795,7 @@
 
     <p>Complementando al PND, los programas derivados constituyen instrumentos de mediano plazo que especifican los objetivos, estrategias y líneas de acción para sectores específicos o temas transversales. Para una entidad paraestatal de nueva creación, es crucial identificar a cuáles programas debe alinearse según su sector de competencia y objetivos institucionales. Esta identificación le permitirá concretar su contribución al desarrollo nacional.</p>
 
+    <!-- Concepto de Programas Sectoriales -->
     <div class="concept-box" role="region" aria-labelledby="programas-sectoriales">
         <h4 id="programas-sectoriales">Programas Sectoriales</h4>
         <p>Son instrumentos que establecen objetivos, estrategias y prioridades del desarrollo integral del país en cada sector de la administración pública federal. Se elaboran conforme a las previsiones del PND y contienen estimaciones de recursos y determinaciones sobre instrumentos y responsables de su ejecución. Su entidad, al estar adscrita a un sector específico, deberá consultar y alinear su <a href="#concepto-programa-institucional">Programa Institucional</a> y programas presupuestarios a lo establecido en el programa sectorial correspondiente, como lo indica el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LP.pdf#page=7" target="_blank">Artículo 25 de la Ley de Planeación</a>.</p>
@@ -768,6 +809,7 @@
         </ul>
     </div>
 
+    <!-- Concepto de Programas Transversales -->
     <div class="concept-box" role="region" aria-labelledby="programas-transversales">
         <h4 id="programas-transversales">Programas Transversales</h4>
         <p>Estos programas abordan temas que atraviesan múltiples sectores y requieren coordinación interinstitucional. Son de particular relevancia porque todas las entidades, independientemente de su sector, deben incorporar estos enfoques en sus actividades para garantizar un desarrollo integral y equitativo. La contribución de su entidad a estos programas deberá reflejarse en sus programas presupuestarios y en la medición de su desempeño.</p>
@@ -781,6 +823,7 @@
         </ul>
     </div>
 
+    <!-- Tabla de Tipos de Programas -->
     <table role="table" aria-labelledby="tipos-programas">
         <caption id="tipos-programas" style="visibility: hidden; position: absolute;">Tabla de Tipos de Programas (Sectorial, Transversal, Especial, Regional)</caption>
         <tr>
@@ -817,6 +860,7 @@
         </tr>
     </table>
 
+    <!-- Caja de advertencia sobre obligaciones de alineación -->
     <div class="warning-box" role="region" aria-labelledby="obligaciones-alineacion">
         <h4 id="obligaciones-alineacion">Obligaciones de Alineación para Entidades Paraestatales</h4>
         <p>Es indispensable que, como entidad paraestatal, su institución cumpla con la alineación normativa:</p>
@@ -833,6 +877,7 @@
 
     <p>La alineación estratégica es el proceso mediante el cual una entidad paraestatal vincula sus objetivos, actividades y recursos con los objetivos nacionales y sectoriales establecidos en el PND y sus programas derivados. Este proceso garantiza que los recursos públicos se utilicen de manera coherente con las prioridades gubernamentales y que su entidad opere bajo una dirección clara y unificada. Para lograr esta alineación, es fundamental un análisis riguroso y una definición precisa de los elementos institucionales.</p>
 
+    <!-- Diagrama de flujo del proceso de alineación estratégica -->
     <div class="process-diagram" role="region" aria-labelledby="proceso-alineacion-estrategica">
         <h4 id="proceso-alineacion-estrategica">Proceso de Alineación Estratégica para Entidades Paraestatales</h4>
         <div>
@@ -851,15 +896,17 @@
         </div>
     </div>
 
+    <!-- Concepto de Metodología de Alineación Estratégica Institucional -->
     <div class="concept-box" role="region" aria-labelledby="metodologia-alineacion">
         <h4 id="metodologia-alineacion">Metodología de Alineación Estratégica Institucional</h4>
         <p>Para su entidad, la alineación estratégica se desarrolla mediante los siguientes pasos clave, asegurando que cada acción y recurso apunte hacia el cumplimiento de las metas nacionales:</p>
-        <p><strong>Paso 1: Análisis de Atribuciones y Marco Normativo</strong> - Identifique las atribuciones legales y el mandato institucional establecido en el decreto de creación de su entidad. Comprenda su clasificación dentro del <a href="https://www.gob.mx/cms/uploads/attachment/file/971705/MCGSPF_2025_07_III_Clasificacion_del_Sector_Paraestatal_Federal.pdf" target="_blank">Sector Paraestatal Federal (MCGSPF 2025)</a>, lo cual definirá su ramo y sector de adscripción.</p>
+        <p><strong>Paso 1: Análisis de Atribuciones y Marco Normativo</strong> - Identifique las atribuciones legales y el mandato institucional establecido en el decreto de creación de su entidad. Comprenda su clasificación dentro del <a href="https://www.gob.mx/cms/uploads/attachment/file/971705/MCGSPF_2025_07_III_Clasificacion_del_Sector_Paraestatal_Federal.pdf" target="_blank">Sector Paraestatal Federal (MCGSPF) 2025</a>, lo cual definirá su ramo y sector de adscripción.</p>
         <p><strong>Paso 2: Mapeo de Contribución al PND</strong> - Determine a qué objetivos prioritarios del PND puede contribuir la entidad con mayor impacto, considerando sus funciones sustantivas. Este mapeo es fundamental para justificar la pertinencia de su entidad en el aparato estatal.</p>
         <p><strong>Paso 3: Formulación de Objetivos Institucionales</strong> - Formule objetivos específicos, medibles, alcanzables, relevantes y con plazos definidos (SMART) que contribuyan directamente a los objetivos nacionales y sectoriales. Estos objetivos serán la base de su <a href="#concepto-programa-institucional">Programa Institucional</a>.</p>
         <p><strong>Paso 4: Establecimiento de Indicadores de Contribución</strong> - Diseñe indicadores que muestren cómo las actividades institucionales impactan en los resultados nacionales. Estos indicadores le permitirán no solo medir su desempeño, sino también comunicar su valor público de manera tangible. <span class="highlight">(Práctica Normada: Art. 27 LFPRH)</span></p>
     </div>
 
+    <!-- Lista de Verificación para Alineación Estratégica Institucional Exitosa -->
     <div class="checklist" role="region" aria-labelledby="lista-alineacion-estrategica">
         <h4 id="lista-alineacion-estrategica">Lista de Verificación: Alineación Estratégica Institucional Exitosa</h4>
         <p>Para asegurar que su entidad se alinee de manera efectiva, considere los siguientes puntos:</p>
@@ -868,9 +915,9 @@
             <li>✓ ¿Se ha identificado el programa sectorial al que su entidad está adscrita y se han revisado sus objetivos y estrategias? <span class="highlight">(Práctica Normada: Art. 25 Ley de Planeación)</span></li>
             <li>✓ ¿Los indicadores institucionales de su <a href="#definicion-mir">MIR</a> son compatibles y complementarios con los indicadores sectoriales y nacionales? <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025)</span></li>
             <li>✓ ¿Se han considerado los programas transversales aplicables a su entidad (ej. igualdad de género, anticorrupción) en la definición de sus objetivos y estrategias? <span class="highlight">(Práctica Normada: Anexos Transversales del PEF)</span></li>
-            <li>✓ ¿La misión institucional de su entidad refleja explícitamente su contribución al desarrollo nacional y a las prioridades del PND? <span class="highlight">(Sugerencia IA, buena práctica)</span></li>
+            <li>✓ ¿La misión institucional de su entidad refleja explícitamente su contribución al desarrollo nacional y a las prioridades del PND? <span class="highlight">(Práctica Normada: Art. 21 LFEP)</span></li>
             <li>✓ ¿Los recursos solicitados en su anteproyecto de presupuesto son congruentes y están directamente vinculados con la contribución esperada a los objetivos nacionales y sectoriales? <span class="highlight">(Práctica Normada: Art. 44 LFPRH)</span></li>
-            <li>✓ ¿Se han establecido mecanismos de coordinación efectivos con la Secretaría coordinadora de su sector para asegurar una alineación continua y reportes unificados? <span class="highlight">(Sugerencia IA, buena práctica)</span></li>
+            <li>✓ ¿Se han establecido mecanismos de coordinación efectivos con la Secretaría coordinadora de su sector para asegurar una alineación continua y reportes unificados? <span class="highlight">(Práctica Normada: Art. 21 de la Ley Orgánica de la Administración Pública Federal)</span></li>
         </ul>
     </div>
 
@@ -882,6 +929,7 @@
 
     <p>La Matriz de Marco Lógico (MML) es una herramienta analítica clave para la planificación y gestión de programas y proyectos en el sector público mexicano. Aunque su origen es externo, su aplicación y formato han sido estandarizados en México como parte del Presupuesto basado en Resultados (PbR) y el Sistema de Evaluación del Desempeño (SED). Es la metodología oficial para el diseño de programas presupuestarios, conforme a lo establecido en el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>.</p>
 
+    <!-- Concepto de Matriz de Marco Lógico (MML) -->
     <div class="concept-box" role="region" aria-labelledby="que-es-marco-logico">
         <h4 id="que-es-marco-logico">¿Qué es la Matriz de Marco Lógico (MML)?</h4>
         <p>La MML es una herramienta que facilita el proceso de conceptualización, diseño, ejecución y evaluación de programas y proyectos. Su propósito principal es brindar una estructura lógica y comunicar información esencial relativa al programa de manera clara y concisa. Para su entidad, la MML será el esqueleto de sus programas presupuestarios, permitiendo visualizar la relación causa-efecto entre sus actividades y los resultados esperados.</p>
@@ -896,11 +944,12 @@
         </ul>
     </div>
 
+    <!-- Diagrama de flujo de la Estructura Lógica Vertical de la MML -->
     <div class="process-diagram" role="region" aria-labelledby="estructura-marco-logico">
         <h4 id="estructura-marco-logico">Estructura Lógica Vertical de la Matriz de Marco Lógico</h4>
         <div style="text-align: left; font-size: 9pt;">
             <div style="background: #8B4513; color: white; padding: 3mm; margin: 1mm; border-radius: 5px;"><strong>FIN:</strong> Contribución a objetivos de desarrollo superior (PND)</div>
-            <div style="text-align: center; font-size: 12pt;">↑ IMPACTO</div>
+            <div style="text-align: center;">↑ IMPACTO</div>
             <div style="background: #17a2b8; color: white; padding: 3mm; margin: 1mm; border-radius: 5px;"><strong>PROPÓSITO:</strong> Cambio esperado en la población objetivo (Meta institucional)</div>
             <div style="text-align: center; font-size: 12pt;">↑ RESULTADO</div>
             <div style="background: #28a745; color: white; padding: 3mm; margin: 1mm; border-radius: 5px;"><strong>COMPONENTES:</strong> Bienes y servicios que produce el programa (Productos de la entidad)</div>
@@ -912,6 +961,7 @@
         </div>
     </div>
 
+    <!-- Tabla de Niveles de la Matriz de Marco Lógico -->
     <table role="table" aria-labelledby="niveles-marco-logico">
         <caption id="niveles-marco-logico" style="visibility: hidden; position: absolute;">Tabla de Niveles de la Matriz de Marco Lógico</caption>
         <tr>
@@ -923,7 +973,7 @@
         </tr>
         <tr>
             <td><strong>Fin</strong></td>
-            <td>Describe cómo el programa contribuye a la solución del problema de desarrollo de la sociedad o a un objetivo de desarrollo superior establecido en el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a>.</td>
+            <td>Describe cómo el programa contribuye a la solución del problema de desarrollo de la sociedad o a un objetivo de desarrollo superior establecido en el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a>.</td>
             <td>¿Para qué se hace el programa?</td>
             <td>Impacto (Estratégico)</td>
             <td>Alineación al PND (<a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LP.pdf#page=4" target="_blank">Ley de Planeación, Art. 15</a>)</td>
@@ -951,6 +1001,7 @@
         </tr>
     </table>
 
+    <!-- Ejemplo de MML Aplicada -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-programa-cientifico">
         <h4 id="ejemplo-programa-cientifico">Ejemplo de MML Aplicada: Programa de Desarrollo Científico y Tecnológico (Instituto Ficticio)</h4>
         <p>Para su entidad, la MML puede lucir así:</p>
@@ -974,6 +1025,7 @@
         </div>
     </div>
 
+    <!-- Caja de advertencia sobre errores comunes en la construcción de la MML -->
     <div class="warning-box" role="region" aria-labelledby="errores-marco-logico">
         <h4 id="errores-marco-logico">Errores Comunes en la Construcción de la Matriz de Marco Lógico (MML)</h4>
         <p>Al construir su MML, es importante evitar estos errores para asegurar la claridad y coherencia de sus programas presupuestarios:</p>
@@ -982,7 +1034,7 @@
             <li><strong>2. Múltiples propósitos por programa:</strong> Un programa presupuestario debe tener un solo Propósito bien definido, el cual es el cambio directo que busca generar. Evite dispersar el enfoque con varios propósitos. <span class="highlight">(Práctica Normada: Art. 27 LFPRH)</span></li>
             <li><strong>3. Componentes no concretos:</strong> Describir componentes como procesos o acciones ("realizar talleres") en lugar de productos concretos y medibles ("talleres impartidos"). <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025)</span></li>
             <li><strong>4. Lógica vertical inconsistente:</strong> Que las actividades no conduzcan a los componentes, o que los componentes no lleven lógicamente al propósito. La MML debe tener una secuencia de "si...entonces". <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025)</span></li>
-            <li><strong>5. Objetivos ambiguos en cualquier nivel:</strong> Establecer objetivos que no son claros, medibles, alcanzables, relevantes o con plazos definidos. Esto dificulta el seguimiento y la evaluación. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Lineamientos CONEVAL)</span></li>
+            <li><strong>5. Objetivos ambiguos en cualquier nivel:</strong> Establecer objetivos que no son claros, medibles, alcanzables, relevantes o con plazos definidos. Esto dificulta el seguimiento y la evaluación. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Lineamientos de Evaluación del Desempeño del CONEVAL)</span></li>
         </ul>
     </div>
 
@@ -990,6 +1042,7 @@
 
     <p>La Matriz de Indicadores para Resultados (MIR) es la concreción de la Matriz de Marco Lógico en el contexto del sistema presupuestario mexicano. Es la herramienta oficial que operacionaliza la metodología del PbR y es obligatoria para todos los programas presupuestarios federales. Su uso fue establecido por el <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">Artículo 27 de la Ley Federal de Presupuesto y Responsabilidad Hacendaria (LFPRH)</a> y se detalla en el <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>.</p>
 
+    <!-- Concepto de Matriz de Indicadores para Resultados (MIR) detallada -->
     <div class="concept-box" role="region" aria-labelledby="definicion-mir-detallada">
         <h4 id="definicion-mir-detallada">Definición Detallada de la MIR</h4>
         <p>La MIR es una herramienta indispensable que resume los componentes principales de un programa presupuestario de su entidad en una matriz de cuatro filas (niveles de objetivos: Fin, Propósito, Componentes y Actividades) por cuatro columnas, que incluyen:</p>
@@ -1004,6 +1057,7 @@
         </div>
     </div>
 
+    <!-- Tabla Ejemplo de Matriz de Indicadores para Resultados (MIR) Ampliada -->
     <table style="font-size: 8pt;" role="table" aria-labelledby="ejemplo-mir-ampliado">
         <caption id="ejemplo-mir-ampliado" style="visibility: hidden; position: absolute;">Tabla Ejemplo de Matriz de Indicadores para Resultados (MIR) Ampliada para Entidades Paraestatales</caption>
         <tr>
@@ -1036,7 +1090,7 @@
             <td><strong>De Gestión:</strong> Número de proyectos financiados y concluidos.<br><strong>De Gestión:</strong> Cantidad de servicios de vinculación ofrecidos.<br><strong>De Gestión:</strong> Número de profesionales con formación especializada.</td>
             <td>Reportes del sistema de seguimiento de proyectos interno.<br>Registros de servicios brindados.<br>Certificados de formación y padrón de egresados.</td>
             <td>Los investigadores cumplen con los entregables.<br>Las empresas solicitan activamente los servicios.<br>Los participantes completan exitosamente los programas formativos.</td>
-            <td><a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos CONEVAL</a>.</td>
+            <td><a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a>.</td>
         </tr>
         <tr>
             <td><strong>Actividades</strong></td>
@@ -1044,10 +1098,11 @@
             <td><strong>De Gestión:</strong> Porcentaje de convocatorias publicadas en tiempo.<br><strong>De Gestión:</strong> Porcentaje de propuestas evaluadas según plazos.<br><strong>De Gestión:</strong> Porcentaje de informes técnicos recibidos.</td>
             <td>Calendario de convocatorias, DOF.<br>Actas de comités de evaluación.<br>Expedientes técnicos de proyectos.</td>
             <td>Los recursos humanos y materiales están disponibles oportunamente.<br>Expertos externos participan en las evaluaciones.<br>Los beneficiarios presentan sus informes en tiempo.</td>
-            <td><a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos CONEVAL</a>.</td>
+            <td><a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a>.</td>
         </tr>
     </table>
 
+    <!-- Concepto de Características de Indicadores Estratégicos y de Gestión -->
     <div class="concept-box" role="region" aria-labelledby="caracteristicas-indicadores">
         <h4 id="caracteristicas-indicadores">Características de Indicadores Estratégicos y de Gestión para Entidades Paraestatales</h4>
         <p>Los indicadores se clasifican en dos tipos principales, cada uno con un propósito distinto en la medición del desempeño de su entidad:</p>
@@ -1057,7 +1112,7 @@
             <li>Se enfocan en los cambios generados en la población objetivo o en el ámbito de acción de su entidad.</li>
             <li>Su medición puede requerir instrumentos especializados como encuestas nacionales, evaluaciones externas o datos macroeconómicos.</li>
             <li>La frecuencia de su medición suele ser anual o bienal.</li>
-            <li><span class="highlight">Requisito Normado:</span> La <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Artículo 27</a>, y los <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos del CONEVAL</a> exigen la definición de indicadores estratégicos para la evaluación del desempeño.</li>
+            <li><span class="highlight">Requisito Normado:</span> La <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Artículo 27</a>, y los <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a> exigen la definición de indicadores estratégicos para la evaluación del desempeño.</li>
         </ul>
         <p><strong>Indicadores de Gestión (Nivel Componentes y Actividades):</strong></p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
@@ -1065,10 +1120,11 @@
             <li>Se enfocan en la eficiencia y eficacia operativa en la entrega de bienes y servicios.</li>
             <li>Su medición utiliza generalmente registros administrativos internos de su entidad, lo que facilita un monitoreo constante.</li>
             <li>La frecuencia de su medición es más frecuente, típicamente trimestral o mensual, para permitir ajustes rápidos en la operación.</li>
-            <li><span class="highlight">Requisito Normado:</span> El <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a> y los <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos del CONEVAL</a> detallan la importancia de los indicadores de gestión para el seguimiento operativo.</li>
+            <li><span class="highlight">Requisito Normado:</span> El <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a> y los <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a> detallan la importancia de los indicadores de gestión para el seguimiento operativo.</li>
         </ul>
     </div>
 
+    <!-- Lista de Verificación para Criterios SMART -->
     <div class="checklist" role="region" aria-labelledby="criterios-smart">
         <h4 id="criterios-smart">Criterios SMART para la Construcción de Indicadores Eficaces</h4>
         <p>Al diseñar los indicadores para su MIR, asegúrese de que cumplan con los criterios SMART, una metodología ampliamente aceptada que garantiza la calidad y utilidad de sus indicadores:</p>
@@ -1084,18 +1140,20 @@
 
     <h3 id="subseccion-4-3-3">4.3.3 Integración de la Estrategia Organizacional y su Vínculo con la Planeación Presupuestaria</h3>
 
-    <p>La integración de la estrategia organizacional es un proceso vital mediante el cual su entidad paraestatal alinea todos sus elementos institucionales – desde su estructura, sus procesos internos, sus recursos humanos y materiales, hasta su cultura – para maximizar el logro de sus objetivos estratégicos definidos en el marco del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y su programa sectorial correspondiente. Este enfoque holístico asegura que cada parte de su entidad trabaje en armonía hacia una visión común, haciendo que la planeación presupuestaria sea un reflejo fiel de las prioridades institucionales.</p>
+    <p>La integración de la estrategia organizacional es un proceso vital mediante el cual su entidad paraestatal alinea todos sus elementos institucionales – desde su estructura, sus procesos internos, sus recursos humanos y materiales, hasta su cultura – para maximizar el logro de sus objetivos estratégicos definidos en el marco del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y su programa sectorial correspondiente. Este enfoque holístico asegura que cada parte de su entidad trabaje en armonía hacia una visión común, haciendo que la planeación presupuestaria sea un reflejo fiel de las prioridades institucionales.</p>
 
+    <!-- Concepto de Elementos Clave de la Estrategia Organizacional -->
     <div class="concept-box" role="region" aria-labelledby="elementos-estrategia-organizacional">
         <h4 id="elementos-estrategia-organizacional">Elementos Clave de la Estrategia Organizacional para Entidades Paraestatales</h4>
         <p>Para su entidad de nueva creación, la claridad en estos elementos es fundamental para una integración efectiva:</p>
-        <p><strong>1. Misión Institucional:</strong> La razón de ser de su entidad. Debe estar inequívocamente alineada con los objetivos del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y reflejar su contribución específica al desarrollo nacional, tal como se establece en la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=12" target="_blank">LOAPF</a> y <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">LFEP</a>.</p>
-        <p><strong>2. Visión de Futuro:</strong> El estado deseado de su entidad al final del periodo estratégico (2030). Esta visión debe ser ambiciosa pero coherente con los objetivos a largo plazo del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y el sector al que pertenece. <span class="highlight">(Sugerencia IA, buena práctica)</span></p>
+        <p><strong>1. Misión Institucional:</strong> La razón de ser de su entidad. Debe estar inequívocamente alineada con los objetivos del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y reflejar su contribución específica al desarrollo nacional, tal como se establece en la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=12" target="_blank">Ley Orgánica de la Administración Pública Federal (LOAPF), Artículo 12</a> y <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">Ley Federal de las Entidades Paraestatales (LFEP), Artículo 5</a>.</p>
+        <p><strong>2. Visión de Futuro:</strong> El estado deseado de su entidad al final del periodo estratégico (2030). Esta visión debe ser ambiciosa pero coherente con los objetivos a largo plazo del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y el sector al que pertenece. <span class="highlight">(Práctica Normada: Art. 21 LFEP, implícita en la formulación del Programa Institucional)</span></p>
         <p><strong>3. Valores Institucionales:</strong> Los principios éticos y de conducta que guían el comportamiento organizacional de su entidad. Esto incluye los valores constitucionales de legalidad, honradez, lealtad, imparcialidad y eficiencia en el servicio público. <span class="highlight">(Práctica Normada: Art. 134 CPEUM)</span></p>
-        <p><strong>4. Objetivos Estratégicos:</strong> Los resultados de mediano plazo que su entidad se propone alcanzar, vinculados directamente a los objetivos prioritarios del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y del programa sectorial. Estos objetivos son la base para sus programas presupuestarios. <span class="highlight">(Práctica Normada: Art. 21 LFEP)</span></p>
-        <p><strong>5. Estrategias Institucionales:</strong> Los cursos de acción generales que su entidad implementará para alcanzar los objetivos. Estas estrategias deben considerar tanto las capacidades internas como el entorno externo, y serán el marco para la definición de actividades específicas. <span class="highlight">(Sugerencia IA, buena práctica)</span></p>
+        <p><strong>4. Objetivos Estratégicos:</strong> Los resultados de mediano plazo que su entidad se propone alcanzar, vinculados directamente a los objetivos prioritarios del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y del programa sectorial. Estos objetivos son la base para sus programas presupuestarios. <span class="highlight">(Práctica Normada: Art. 21 LFEP)</span></p>
+        <p><strong>5. Estrategias Institucionales:</strong> Los cursos de acción generales que su entidad implementará para alcanzar los objetivos. Estas estrategias deben considerar tanto las capacidades internas como el entorno externo, y serán el marco para la definición de actividades específicas. <span class="highlight">(Práctica Normada: Art. 21 LFEP, implícita en la formulación del Programa Institucional)</span></p>
     </div>
 
+    <!-- Diagrama de flujo del Proceso de Integración Estratégica -->
     <div class="process-diagram" role="region" aria-labelledby="proceso-integracion-estrategica">
         <h4 id="proceso-integracion-estrategica">Proceso de Integración Estratégica en una Entidad Paraestatal</h4>
         <p>Este flujo describe cómo se teje la estrategia de su entidad para que sea efectiva y resuene con la planeación nacional:</p>
@@ -1115,10 +1173,11 @@
         </div>
     </div>
 
+    <!-- Ejemplo de Modelo de Integración Estratégica -->
     <div class="example-box" role="region" aria-labelledby="modelo-integracion-energias-renovables">
         <h4 id="modelo-integracion-energias-renovables">Modelo de Integración Estratégica: Instituto Nacional de Energías Renovables (Ejemplo)</h4>
         <p>Consideremos un <strong>Instituto Nacional de Energías Renovables</strong> de nueva creación:</p>
-        <p><strong>Contexto PND:</strong> Se alinea al <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Eje Economía del PND</a>, con el Objetivo Prioritario: "Promover la transición energética sustentable y la soberanía energética."</p>
+        <p><strong>Contexto PND:</strong> Se alinea al <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Eje Economía del PND 2025-2030</a>, con el Objetivo Prioritario: "Promover la transición energética sustentable y la soberanía energética."</p>
         <p><strong>Misión:</strong> "Desarrollar y promover tecnologías de energías renovables e impulsar la transición energética en México, para contribuir a la soberanía energética y al desarrollo sostenible del país."</p>
         <p><strong>Objetivos Estratégicos (del PI):</strong></p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
@@ -1129,42 +1188,43 @@
         <p><strong>Estructura Organizacional:</strong> Para lograr estos objetivos, el Instituto establece tres unidades sustantivas principales (una por cada OE), además de unidades de apoyo transversal (administración, finanzas, planeación), asegurando que cada parte de la estructura contribuya directamente a la misión y objetivos.</p>
     </div>
 
+    <!-- Tabla de Componentes Organizacionales y su Propósito en la Estrategia -->
     <table role="table" aria-labelledby="componente-organizacional">
         <caption id="componente-organizacional" style="visibility: hidden; position: absolute;">Tabla de Componentes Organizacionales y su Propósito en la Estrategia</caption>
         <tr>
             <th>Componente Organizacional</th>
             <th>Propósito en la Estrategia</th>
             <th>Consideraciones Específicas para Entidades de Nueva Creación</th>
-            <th>Requisito Normativo / Sugerencia IA</th>
+            <th>Requisito Normativo / Concepto Clave</th>
         </tr>
         <tr>
             <td>Estructura Orgánica</td>
             <td>Organizar las capacidades humanas y materiales para ejecutar la estrategia y los programas presupuestarios de manera eficiente.</td>
-            <td>Debe ser simple pero funcional, evitando duplicidades de funciones y favoreciendo la agilidad en la toma de decisiones. <span class="highlight">(Sugerencia IA, buena práctica)</span></td>
+            <td>Debe ser simple pero funcional, evitando duplicidades de funciones y favoreciendo la agilidad en la toma de decisiones. <span class="highlight">(Práctica Normada: Art. 12 LOAPF y Art. 5 LFEP, que definen la estructura administrativa)</span></td>
             <td><a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=1" target="_blank">LOAPF</a> (Define estructura general); <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">LFEP</a> (Especifica órganos de entidades).</td>
         </tr>
         <tr>
             <td>Procesos Sustantivos</td>
             <td>Transformar los insumos en productos (bienes y servicios) que generen valor público directo para los beneficiarios.</td>
-            <td>Definir los procesos críticos desde el inicio, documentarlos y establecer métricas de eficiencia. <span class="highlight">(Sugerencia IA, buena práctica)</span></td>
+            <td>Definir los procesos críticos desde el inicio, documentarlos y establecer métricas de eficiencia. <span class="highlight">(Práctica Normada: Manual de Programación y Presupuesto PEF 2025, sección de diseño de programas)</span></td>
             <td><a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a> (Detalla productos y actividades).</td>
         </tr>
         <tr>
             <td>Sistema de Gestión del Desempeño</td>
             <td>Monitorear el desempeño de los programas, recabar información y facilitar la toma de decisiones para ajustes oportunos.</td>
-            <td>Implementar sistemas básicos pero robustos de seguimiento de indicadores desde el primer día. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Lineamientos CONEVAL)</span></td>
-            <td><a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Art. 27</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos CONEVAL</a>.</td>
+            <td>Implementar sistemas básicos pero robustos de seguimiento de indicadores desde el primer día. <span class="highlight">(Práctica Normada: Art. 27 LFPRH, Lineamientos de Evaluación del Desempeño del CONEVAL)</span></td>
+            <td><a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Art. 27</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a>.</td>
         </tr>
         <tr>
             <td>Recursos Humanos</td>
             <td>Contar con las competencias y el talento humano necesario para ejecutar la estrategia y los programas.</td>
-            <td>Priorizar la contratación de perfiles técnicos críticos y capacidades gerenciales para las funciones sustantivas y de planeación presupuestaria. <span class="highlight">(Sugerencia IA, buena práctica)</span></td>
-            <td><a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LGCG.pdf#page=1" target="_blank">LFEP</a> (Regula el personal); Normativa de Servicio Profesional de Carrera (si aplica).</td>
+            <td>Priorizar la contratación de perfiles técnicos críticos y capacidades gerenciales para las funciones sustantivas y de planeación presupuestaria. <span class="highlight">(Práctica Normada: Ley Federal de los Trabajadores al Servicio del Estado, Título Tercero de las Obligaciones de los Trabajadores)</span></td>
+            <td><a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf#page=5" target="_blank">LFEP</a> (Regula el personal); Normativa de Servicio Profesional de Carrera (si aplica).</td>
         </tr>
         <tr>
             <td>Cultura Organizacional</td>
             <td>Crear un ambiente que fomente la transparencia, la rendición de cuentas, la eficiencia y el compromiso con los resultados.</td>
-            <td>Establecer desde el inicio valores de austeridad republicana, servicio público, transparencia y orientación a resultados. <span class="highlight">(Sugerencia IA, buena práctica)</span></td>
+            <td>Establecer desde el inicio valores de austeridad republicana, servicio público, transparencia y orientación a resultados. <span class="highlight">(Práctica Normada: Art. 134 CPEUM y <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a>, principios de austeridad y honestidad)</span></td>
             <td><a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> (Principios de austeridad y honestidad).</td>
         </tr>
     </table>
@@ -1177,11 +1237,12 @@
 
     <p>La estructura programática del Presupuesto de Egresos de la Federación (PEF) es el sistema de organización y clasificación que permite vincular la asignación de recursos públicos con los objetivos y resultados de las políticas públicas. Para una entidad paraestatal de nueva creación, comprender esta estructura es fundamental para solicitar y gestionar adecuadamente sus recursos, ya que le permitirá clasificar sus programas y actividades de la forma exigida por la Secretaría de Hacienda y Crédito Público (SHCP).</p>
 
+    <!-- Concepto de Estructura Programática -->
     <div class="concept-box" role="region" aria-labelledby="que-es-estructura-programatica">
         <h4 id="que-es-estructura-programatica">¿Qué es la Estructura Programática?</h4>
         <p>Es la organización de las actividades del sector público en categorías homogéneas respecto de sus fines, propósitos o características, expresada en forma de programas. Esta estructura es la columna vertebral de la programación del gasto y permite:</p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
-            <li>Vincular el gasto con los objetivos de las políticas públicas y del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a>.</li>
+            <li>Vincular el gasto con los objetivos de las políticas públicas y del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a>.</li>
             <li>Facilitar el seguimiento y evaluación del desempeño gubernamental, al agrupar actividades con propósitos similares.</li>
             <li>Mejorar la transparencia y rendición de cuentas, al mostrar claramente a qué programas se destina cada recurso.</li>
             <li>Optimizar la asignación de recursos según las prioridades nacionales y sectoriales.</li>
@@ -1191,6 +1252,7 @@
         </div>
     </div>
 
+    <!-- Diagrama de flujo de la Jerarquía de la Estructura Programática Federal -->
     <div class="process-diagram" role="region" aria-labelledby="jerarquia-estructura-programatica">
         <h4 id="jerarquia-estructura-programatica">Jerarquía de la Estructura Programática Federal</h4>
         <div style="text-align: left; font-size: 9pt;">
@@ -1209,10 +1271,11 @@
         </div>
     </div>
 
+    <!-- Concepto de Elementos Clave de la Estructura Programática -->
     <div class="concept-box" role="region" aria-labelledby="elementos-estructura-programatica">
         <h4 id="elementos-estructura-programatica">Elementos Clave de la Estructura Programática que su Entidad Debe Conocer</h4>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
-            <li><strong>Ramo:</strong> Es la clasificación de las dependencias y entidades de la Administración Pública Federal. Los ramos pueden ser administrativos (ej. Hacienda) o generales (ej. Participaciones a Entidades Federativas). Para su paraestatal, estará adscrita a un ramo administrativo específico, definido por su sector de adscripción, según la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=1" target="_blank">LOAPF</a>.</li>
+            <li><strong>Ramo:</strong> Es la clasificación de las dependencias y entidades de la Administración Pública Federal. Los ramos pueden ser administrativos (ej. Hacienda) o generales (ej. Participaciones a Entidades Federativas). Para su paraestatal, estará adscrita a un ramo administrativo específico, definido por su sector de adscripción, según la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=1" target="_blank">Ley Orgánica de la Administración Pública Federal (LOAPF)</a>.</li>
             <li><strong>Unidad Responsable (UR):</strong> Su entidad, al ser de nueva creación, será registrada como una Unidad Responsable ante la SHCP. Es la instancia administrativa a cargo de la ejecución de programas y proyectos, y es quien ejerce y controla el presupuesto asignado. <span class="highlight">(Práctica Normada: Art. 42 LFPRH)</span></li>
             <li><strong>Programa Presupuestario (Pp):</strong> Es la categoría principal para la asignación de recursos y es el nivel al que se vincula la <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a>. Agrupa acciones que buscan alcanzar objetivos específicos. Ejemplos para entidades paraestatales: "Investigación y Desarrollo Tecnológico", "Servicios de Fomento Cultural", "Operación de Infraestructura Energética". <span class="highlight">(Práctica Normada: Art. 27 LFPRH)</span></li>
             <li><strong>Actividad Institucional:</strong> Conjunto de operaciones y tareas que concurren a la consecución de los productos y resultados del programa presupuestario. Son las acciones específicas que su entidad realizará para entregar sus componentes.</li>
@@ -1220,6 +1283,7 @@
         </ul>
     </div>
 
+    <!-- Ejemplo de Estructura Programática Aplicada -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-estructura-programatica">
         <h4 id="ejemplo-estructura-programatica">Ejemplo de Estructura Programática Aplicada a una Entidad Paraestatal</h4>
         <p>Para su mejor comprensión, tomemos el ejemplo del <strong>Instituto Nacional de Idiomas Indígenas (nombre ficticio)</strong>:</p>
@@ -1233,13 +1297,14 @@
         </div>
     </div>
 
+    <!-- Lista de Verificación para Identificación Correcta de la Estructura Programática -->
     <div class="checklist" role="region" aria-labelledby="lista-estructura-programatica">
         <h4 id="lista-estructura-programatica">Lista de Verificación: Identificación Correcta de la Estructura Programática</h4>
         <p>Asegúrese de que su entidad cumpla con los siguientes puntos al definir su estructura programática:</p>
         <ul>
             <li>✓ ¿Se ha identificado el Ramo al que pertenece su entidad paraestatal y su relación con la Secretaría coordinadora de sector? <span class="highlight">(Práctica Normada: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=1" target="_blank">LOAPF</a>)</span></li>
             <li>✓ ¿Su entidad ha sido registrada formalmente como Unidad Responsable (UR) ante la SHCP y cuenta con la clave de identificación correspondiente? <span class="highlight">(Práctica Normada: Art. 42 LFPRH)</span></li>
-            <li>✓ ¿Se han definido los Programas Presupuestarios (Pp) que su entidad ejecutará, asegurando que estén alineados con el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y el Programa Sectorial correspondiente? <span class="highlight">(Práctica Normada: Art. 21 LFEP, Art. 27 LFPRH)</span></li>
+            <li>✓ ¿Se han definido los Programas Presupuestarios (Pp) que su entidad ejecutará, asegurando que estén alineados con el <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y el Programa Sectorial correspondiente? <span class="highlight">(Práctica Normada: Art. 21 LFEP, Art. 27 LFPRH)</span></li>
             <li>✓ ¿Cada Programa Presupuestario cuenta con su respectiva <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a> validada y actualizada? <span class="highlight">(Práctica Normada: Art. 27 LFPRH)</span></li>
             <li>✓ ¿Los proyectos de inversión de su entidad, en caso de existir, cumplen con los criterios de la <a href="#seccion-4-7">Cartera de Proyectos de Inversión (CPI)</a> de la SHCP y se encuentran debidamente registrados? <span class="highlight">(Práctica Normada: Art. 34 LFPRH, Lineamientos para el Registro en la CPI)</span></li>
         </ul>
@@ -1249,6 +1314,7 @@
 
     <p>Además de la estructura programática, el PEF utiliza diversas clasificaciones del gasto para organizar, transparentar y analizar la aplicación de los recursos públicos. Estas clasificaciones son fundamentales para la formulación, registro y análisis del presupuesto de su entidad paraestatal, permitiéndole categorizar el gasto de manera estandarizada y compatible con el sistema contable gubernamental.</p>
 
+    <!-- Concepto de Clasificación por Objeto del Gasto (Capítulos de Gasto) -->
     <div class="concept-box" role="region" aria-labelledby="clasificaciones-economicas">
         <h4 id="clasificaciones-economicas">Clasificación por Objeto del Gasto (Capítulos de Gasto)</h4>
         <p>Esta clasificación es esencial para su entidad, ya que permite identificar el tipo de bienes y servicios que se adquieren con los recursos públicos. Se organiza en Capítulos de Gasto, que agrupan los egresos por su naturaleza homogénea. Al formular su presupuesto, deberá asignar cada partida al Capítulo correspondiente:</p>
@@ -1268,6 +1334,7 @@
         </div>
     </div>
 
+    <!-- Concepto de Otras Clasificaciones Presupuestarias Relevantes -->
     <div class="concept-box" role="region" aria-labelledby="otras-clasificaciones-relevantes">
         <h4 id="otras-clasificaciones-relevantes">Otras Clasificaciones Presupuestarias Relevantes para su Entidad</h4>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
@@ -1278,6 +1345,7 @@
         </ul>
     </div>
 
+    <!-- Tabla Ejemplo de Clasificaciones Presupuestarias -->
     <table role="table" aria-labelledby="ejemplo-clasificaciones-presupuestarias">
         <caption id="ejemplo-clasificaciones-presupuestarias" style="visibility: hidden; position: absolute;">Tabla Ejemplo de Clasificaciones Presupuestarias para Instituto de Energías Renovables</caption>
         <tr>
@@ -1322,6 +1390,7 @@
 
     <p>Una vez que su entidad ha comprendido la estructura programática y las clasificaciones presupuestarias, el siguiente paso práctico es la formulación de su solicitud de recursos. Este es el proceso mediante el cual su entidad cuantifica y justifica los montos necesarios para la ejecución de sus programas y proyectos, de acuerdo con la planeación establecida. Este proceso se rige estrictamente por las directrices del <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a> y la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>.</p>
 
+    <!-- Diagrama de flujo de Pasos Fundamentales para Formular la Solicitud de Recursos -->
     <div class="process-diagram" role="region" aria-labelledby="pasos-solicitud-recursos">
         <h4 id="pasos-solicitud-recursos">Pasos Fundamentales para Formular la Solicitud de Recursos de su Entidad</h4>
         <p>Este es el camino que su entidad deberá seguir para presentar su anteproyecto:</p>
@@ -1341,12 +1410,13 @@
         </div>
     </div>
 
+    <!-- Concepto de Requisitos Clave e Ineludibles para la Solicitud Presupuestaria -->
     <div class="concept-box" role="region" aria-labelledby="requisitos-clave-solicitud">
         <h4 id="requisitos-clave-solicitud">Requisitos Clave e Ineludibles para la Solicitud Presupuestaria</h4>
         <p>Para que su solicitud sea exitosa, deberá asegurar el cumplimiento de los siguientes requisitos:</p>
-        <p><strong>1. Alineación Total:</strong> Es imperativo demostrar la vinculación de cada peso solicitado con un objetivo específico del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a>, el programa sectorial al que su entidad está adscrita y, por supuesto, la <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a> de cada uno de sus programas presupuestarios. Esta alineación es la piedra angular de un <a href="#concepto-pbr">Presupuesto basado en Resultados</a>. <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></p>
+        <p><strong>1. Alineación Total:</strong> Es imperativo demostrar la vinculación de cada peso solicitado con un objetivo específico del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a>, el programa sectorial al que su entidad está adscrita y, por supuesto, la <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a> de cada uno de sus programas presupuestarios. Esta alineación es la piedra angular de un <a href="#concepto-pbr">Presupuesto basado en Resultados</a>. <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></p>
         <p><strong>2. Cuantificación Precisa de Metas Físicas:</strong> Establezca metas físicas claras y medibles para cada componente y actividad de sus programas. Estas metas deben ser el punto de partida para proyectar su costo asociado. Por ejemplo, si su entidad tiene como meta "impartir 100 talleres", deberá detallar el costo de cada taller. <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></p>
-        <p><strong>3. Justificación Pormenorizada del Gasto:</strong> Argumente la necesidad y eficiencia de cada tipo de gasto (Capítulo de Gasto), detallando las partidas específicas. Por ejemplo, si solicita recursos en el Capítulo 1000 (Servicios Personales), justifique el número de plazas y el tipo de personal requerido. <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></p>
+        <p><strong>3. Justificación Pormenorizada del Gasto:</strong> Argumente la necesidad y eficiencia de cada tipo de gasto (<a href="#clasificaciones-economicas">Capítulo de Gasto</a>), detallando las partidas específicas. Por ejemplo, si solicita recursos en el Capítulo 1000 (Servicios Personales), justifique el número de plazas y el tipo de personal requerido. <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></p>
         <p><strong>4. Consistencia entre Metas y Recursos:</strong> Asegure la compatibilidad y coherencia entre las metas físicas (qué se va a hacer) y los recursos financieros (con cuánto dinero). Una solicitud irreal, ya sea por subestimación o sobrestimación, generará observaciones y retrasos. <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></p>
         <p><strong>5. Formatos Oficiales y Sistemas Electrónicos:</strong> Es obligatorio utilizar los formatos y sistemas electrónicos establecidos por la Secretaría de Hacienda y Crédito Público (SHCP) para la presentación de la información. Esto incluye el Sistema Integral de Planeación y Presupuestación (SIP) u otros que la SHCP determine. <span class="highlight">(Práctica Normada: Art. 45 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=19" target="_blank">LFPRH</a>)</span></p>
         <div class="legal-ref">
@@ -1354,6 +1424,7 @@
         </div>
     </div>
 
+    <!-- Ejemplo práctico de Solicitud de Recursos -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-solicitud-recursos-indigenas">
         <h4 id="ejemplo-solicitud-recursos-indigenas">Ejemplo Práctico: Solicitud de Recursos para el "Instituto Nacional de Idiomas Indígenas"</h4>
         <p>Continuando con nuestro ejemplo del <strong>Instituto Nacional de Idiomas Indígenas</strong>, así podría verse la formulación de una solicitud de recursos:</p>
@@ -1369,11 +1440,12 @@
         <p><strong>Justificación Estratégica:</strong> "Estos recursos son esenciales para la ejecución de los 100 talleres, que contribuyen directamente al objetivo de preservar y revitalizar las lenguas indígenas, alineado con el Eje de Política Social del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y el Programa Sectorial de Cultura. La inversión generará un impacto directo en el fortalecimiento de la identidad cultural y el bienestar de las comunidades indígenas."</p>
     </div>
 
+    <!-- Caja de advertencia sobre errores a evitar en la formulación de la solicitud de recursos -->
     <div class="warning-box" role="region" aria-labelledby="errores-solicitud-recursos">
         <h4 id="errores-solicitud-recursos">Errores a Evitar en la Formulación de la Solicitud de Recursos</h4>
         <p>Para su entidad, es fundamental ser meticuloso en esta etapa. Evitar estos errores le ahorrará tiempo y garantizará la aprobación de su presupuesto:</p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
-            <li><strong>1. Subestimación o Sobreestimación de Costos:</strong> Proyectar costos sin un análisis de mercado riguroso, sin considerar la inflación o sin basarse en datos históricos (si ya los tiene). Esto puede llevar a un presupuesto insuficiente o a observaciones por gasto excesivo. <span class="highlight">(Sugerencia IA, buena práctica)</span></li>
+            <li><strong>1. Subestimación o Sobreestimación de Costos:</strong> Proyectar costos sin un análisis de mercado riguroso, sin considerar la inflación o sin basarse en datos históricos (si ya los tiene). Esto puede llevar a un presupuesto insuficiente o a observaciones por gasto excesivo. <span class="highlight">(Práctica Normada: Art. 44 LFPRH, Manual de Programación y Presupuesto PEF 2025, sección de costeo)</span></li>
             <li><strong>2. Falta de Justificación Detallada:</strong> No argumentar la necesidad y eficiencia de cada peso solicitado, especialmente para capítulos de gasto sensibles como servicios personales o materiales. <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></li>
             <li><strong>3. Inconsistencia entre Metas Físicas y Financieras:</strong> Presentar metas de programas que no concuerdan con los recursos solicitados, o viceversa. La congruencia es vital. <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></li>
             <li><strong>4. Omisión de Anexos y Documentación de Soporte:</strong> No incluir la documentación complementaria requerida (ej. estudios de preinversión para proyectos, justificaciones técnicas específicas). <span class="highlight">(Práctica Normada: Art. 45 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=19" target="_blank">LFPRH</a>)</span></li>
@@ -1387,15 +1459,16 @@
 
     <h3 id="subseccion-4-5-1">4.5.1 Determinación de Techos Presupuestarios y Límites para su Entidad</h3>
 
-    <p>Los techos presupuestarios son las asignaciones máximas de recursos que la Secretaría de Hacienda y Crédito Público (SHCP) otorga a cada dependencia y entidad de la Administración Pública Federal para la elaboración de su anteproyecto de presupuesto. Es fundamental que su entidad comprenda que estos techos no son negociables en una primera instancia y que debe ajustar su solicitud a ellos. Estos límites son definidos con base en la política económica del país, la disponibilidad general de recursos y las prioridades estratégicas del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a>.</p>
+    <p>Los techos presupuestarios son las asignaciones máximas de recursos que la Secretaría de Hacienda y Crédito Público (SHCP) otorga a cada dependencia y entidad de la Administración Pública Federal para la elaboración de su anteproyecto de presupuesto. Es fundamental que su entidad comprenda que estos techos no son negociables en una primera instancia y que debe ajustar su solicitud a ellos. Estos límites son definidos con base en la política económica del país, la disponibilidad general de recursos y las prioridades estratégicas del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a>.</p>
 
+    <!-- Concepto de Techo Presupuestario -->
     <div class="concept-box" role="region" aria-labelledby="concepto-techo-presupuestario">
         <h4 id="concepto-techo-presupuestario">Techo Presupuestario</h4>
         <p>Es el monto máximo de recursos que una dependencia o entidad, como la suya, puede solicitar para el siguiente ejercicio fiscal. Este techo se comunica formalmente a las Unidades Responsables por parte de la SHCP, y sirve como el marco financiero vinculante dentro del cual deben construir su anteproyecto de presupuesto. En esencia, le indica a su entidad cuánto dinero máximo podrá disponer para sus programas y proyectos.</p>
         <p><strong>Factores clave que influyen en la determinación del techo presupuestario:</strong></p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
             <li>Previsiones de ingresos del Gobierno Federal para el siguiente ejercicio, que se detallan en la Iniciativa de <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LIF.pdf" target="_blank">Ley de Ingresos de la Federación</a>.</li>
-            <li>Prioridades del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo</a> y de los Programas Sectoriales, ya que la asignación busca alinear el gasto con las políticas públicas estratégicas.</li>
+            <li>Prioridades del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">Plan Nacional de Desarrollo 2025-2030</a> y de los Programas Sectoriales, ya que la asignación busca alinear el gasto con las políticas públicas estratégicas.</li>
             <li>Evaluaciones de desempeño de programas y proyectos anteriores de su entidad o de otras similares, que pueden influir en la confianza y en la asignación de recursos.</li>
             <li>Metas macroeconómicas establecidas por la Secretaría de Hacienda (inflación, tipo de cambio, crecimiento del PIB), que afectan la capacidad de gasto del Gobierno.</li>
             <li>Políticas de austeridad y eficiencia del gasto promovidas por el Gobierno Federal, que buscan optimizar el uso de cada peso público.</li>
@@ -1405,6 +1478,7 @@
         </div>
     </div>
 
+    <!-- Concepto de Topes y Restricciones Específicas -->
     <div class="concept-box" role="region" aria-labelledby="topes-restricciones-especificas">
         <h4 id="topes-restricciones-especificas">Topes y Restricciones Específicas para el Gasto de su Entidad</h4>
         <p>Además del techo global de recursos, la SHCP puede establecer topes o límites específicos para ciertos capítulos de gasto (ej. servicios personales, capítulo 1000) o para tipos de proyectos determinados (ej. inversión pública), con el fin de controlar áreas sensibles del gasto o dirigir recursos a prioridades muy específicas del Gobierno. Para su entidad paraestatal de nueva creación, es posible que el techo inicial sea conservador, basado en proyecciones básicas de operación. Esto significa que deberá ser muy eficiente en el uso de sus primeros recursos y que los montos podrían ser ajustados en ejercicios subsecuentes con base en su desempeño demostrado y una sólida justificación de necesidades crecientes.</p>
@@ -1413,6 +1487,7 @@
         </div>
     </div>
 
+    <!-- Diagrama de flujo de la Determinación de Techos Presupuestarios por la SHCP -->
     <div class="process-diagram" role="region" aria-labelledby="flujo-determinacion-techos">
         <h4 id="flujo-determinacion-techos">Flujo de Determinación de Techos Presupuestarios por la SHCP</h4>
         <p>Así es como la Secretaría de Hacienda comunica los límites de gasto a su entidad:</p>
@@ -1430,6 +1505,7 @@
         </div>
     </div>
 
+    <!-- Caja de advertencia sobre la Importancia Fundamental del Respeto a los Techos Presupuestarios -->
     <div class="warning-box" role="region" aria-labelledby="importancia-techos-presupuestarios">
         <h4 id="importancia-techos-presupuestarios">Importancia Fundamental del Respeto a los Techos Presupuestarios</h4>
         <p>El respeto a los techos presupuestarios es una obligación estricta para su entidad. La presentación de anteproyectos que excedan los montos autorizados sin la debida justificación y validación previa por parte de la SHCP resultará en su rechazo automático y en la necesidad de reajustes inmediatos. Esto puede retrasar significativamente el proceso de aprobación y, por ende, afectar el inicio y la continuidad de las operaciones de su entidad. La disciplina presupuestaria es un pilar de la gestión pública. <span class="highlight">(Práctica Normada: Art. 47 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=20" target="_blank">LFPRH</a>)</span></p>
@@ -1439,6 +1515,7 @@
 
     <p>Una vez que su entidad paraestatal ha recibido su techo presupuestario formal por parte de la SHCP, procede a la fase final de construcción de su anteproyecto de Presupuesto de Egresos. Este proceso implica la distribución interna de los recursos dentro de los límites máximos establecidos, priorizando los programas y proyectos más estratégicos y eficientes de su entidad. Es aquí donde la planeación y la programación se concretan en un documento financiero listo para su revisión por la autoridad hacendaria.</p>
 
+    <!-- Concepto de Anteproyecto de Presupuesto -->
     <div class="concept-box" role="region" aria-labelledby="concepto-anteproyecto-presupuesto">
         <h4 id="concepto-anteproyecto-presupuesto">Anteproyecto de Presupuesto</h4>
         <p>Es la propuesta detallada de ingresos y gastos que su entidad, como cada dependencia y entidad de la Administración Pública Federal, presenta a la SHCP para el siguiente ejercicio fiscal. Esta propuesta se elabora estrictamente con base en el techo presupuestario asignado y en su planeación programática (PI, POA, MIR). Este documento es de suma importancia, ya que se convierte en la base para la integración del Proyecto de Presupuesto de Egresos de la Federación, el cual será enviado al Congreso de la Unión para su aprobación. <span class="highlight">(Práctica Normada: Art. 47 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=20" target="_blank">LFPRH</a>)</span></p>
@@ -1447,21 +1524,23 @@
         </div>
     </div>
 
+    <!-- Lista de Verificación para Construcción Exitosa del Anteproyecto -->
     <div class="checklist" role="region" aria-labelledby="lista-construccion-anteproyecto">
         <h4 id="lista-construccion-anteproyecto">Lista de Verificación: Construcción Exitosa del Anteproyecto de su Entidad</h4>
         <p>Para asegurar que el anteproyecto de su entidad sea sólido y cumpla con la normativa, siga estos puntos:</p>
         <ul>
-            <li>✓ ¿Se ha comunicado el techo presupuestario asignado por la SHCP a todas las áreas internas de su entidad que participan en la planeación y programación? <span class="highlight">(Sugerencia IA, buena práctica de comunicación interna)</span></li>
-            <li>✓ ¿Se han priorizado los Programas Presupuestarios de su entidad que tienen mayor impacto en el cumplimiento de la <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> y los programas sectoriales, ajustándolos al techo? <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></li>
+            <li>✓ ¿Se ha comunicado el techo presupuestario asignado por la SHCP a todas las áreas internas de su entidad que participan en la planeación y programación? <span class="highlight">(Práctica Normada: Art. 47 LFPRH, implícita en la coordinación interinstitucional)</span></li>
+            <li>✓ ¿Se han priorizado los Programas Presupuestarios de su entidad que tienen mayor impacto en el cumplimiento de la <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> y los programas sectoriales, ajustándolos al techo? <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></li>
             <li>✓ ¿Se ha realizado un costeo detallado de cada una de las actividades y proyectos dentro de cada Programa Presupuestario, desglosado por <a href="#clasificaciones-economicas">Capítulo de Gasto</a>? <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></li>
             <li>✓ ¿Se ha validado la consistencia entre las metas físicas (qué se logrará) y los recursos financieros solicitados para cada programa y proyecto? La coherencia es clave. <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></li>
             <li>✓ ¿Se ha justificado cada partida de gasto (por <a href="#clasificaciones-economicas">Objeto del Gasto</a>) dentro del techo asignado, explicando su necesidad y contribución? <span class="highlight">(Práctica Normada: Art. 44 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH</a>)</span></li>
             <li>✓ ¿Se han considerado los proyectos de inversión de su entidad y su impacto en el presupuesto plurianual, asegurando que estén registrados en la <a href="#seccion-4-7">Cartera de Proyectos de Inversión</a>? <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>)</span></li>
-            <li>✓ ¿Se han identificado y aplicado posibles economías y eficiencias para optimizar el uso de los recursos públicos dentro del techo presupuestario? <span class="highlight">(Sugerencia IA, buena práctica de austeridad republicana)</span></li>
+            <li>✓ ¿Se han identificado y aplicado posibles economías y eficiencias para optimizar el uso de los recursos públicos dentro del techo presupuestario? <span class="highlight">(Práctica Normada: Art. 134 CPEUM, Principios de austeridad del PND)</span></li>
             <li>✓ ¿Se ha elaborado el Anteproyecto utilizando los formatos y sistemas oficiales de la SHCP (ej. SIP), respetando todas las especificaciones técnicas? <span class="highlight">(Práctica Normada: Art. 45 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=19" target="_blank">LFPRH</a>)</span></li>
         </ul>
     </div>
 
+    <!-- Diagrama de flujo del Flujo Interno de Construcción del Anteproyecto de Presupuesto -->
     <div class="process-diagram" role="region" aria-labelledby="flujo-interno-anteproyecto">
         <h4 id="flujo-interno-anteproyecto">Flujo Interno de Construcción del Anteproyecto de Presupuesto</h4>
         <p>Este es el proceso que su entidad deberá seguir internamente para consolidar su propuesta presupuestaria:</p>
@@ -1481,6 +1560,7 @@
         </div>
     </div>
 
+    <!-- Ejemplo de Construcción del Anteproyecto -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-construccion-anteproyecto-indigenas">
         <h4 id="ejemplo-construccion-anteproyecto-indigenas">Ejemplo: Construcción del Anteproyecto (Instituto Nacional de Idiomas Indígenas - Ficticio)</h4>
         <p>Retomemos nuestro <strong>Instituto Nacional de Idiomas Indígenas</strong> para ilustrar este proceso:</p>
@@ -1491,7 +1571,7 @@
             <li>Programa E002 (Preservación Cultural): $50 millones (prioridad media).</li>
             <li>Gastos de Operación (Administrativos y de soporte): $20 millones (manteniendo austeridad).</li>
         </ul>
-        <p><strong>Ajustes y Optimización:</strong> Inicialmente, el Instituto había proyectado $90 millones para el Programa E001, pero, ante el techo asignado, ajusta a $80 millones. Este ajuste se logra al priorizar la eficiencia en la contratación de servicios generales (Capítulo 3000) y al optimizar el uso de materiales didácticos (Capítulo 2000), sin afectar las metas físicas de talleres a impartir. <span class="highlight">(Sugerencia IA, buena práctica)</span></p>
+        <p><strong>Ajustes y Optimización:</strong> Inicialmente, el Instituto había proyectado $90 millones para el Programa E001, pero, ante el techo asignado, ajusta a $80 millones. Este ajuste se logra al priorizar la eficiencia en la contratación de servicios generales (Capítulo 3000) y al optimizar el uso de materiales didácticos (Capítulo 2000), sin afectar las metas físicas de talleres a impartir. <span class="highlight">(Práctica Normada: Art. 134 CPEUM, implícita en principios de eficiencia y austeridad)</span></p>
         <p><strong>Justificación Adicional:</strong> El Instituto añade un anexo detallado a su anteproyecto, explicando cómo la optimización permite mantener las metas físicas a pesar del ajuste presupuestario, demostrando así su compromiso con la eficiencia y la disciplina fiscal.</p>
     </div>
 
@@ -1503,6 +1583,7 @@
 
     <p>El proceso de aprobación del Presupuesto de Egresos de la Federación (PEF) sigue un cronograma estricto establecido en la <a href="https://www.ordenjuridico.gob.mx/Constitucion/cn16.pdf#page=39" target="_blank">Constitución Política de los Estados Unidos Mexicanos (Artículo 74, Fracción IV)</a> y la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">Ley Federal de Presupuesto y Responsabilidad Hacendaria (LFPRH)</a>. Es crucial que las entidades paraestatales conozcan estas fechas para asegurar la planeación y ejecución oportuna de sus actividades, evitando sorpresas y adecuándose a los tiempos legislativos.</p>
 
+    <!-- Línea de tiempo de Fechas Clave del Proceso Presupuestario Federal -->
     <div class="timeline" role="region" aria-labelledby="fechas-clave-proceso-presupuestario">
         <h4 id="fechas-clave-proceso-presupuestario">Fechas Clave del Proceso Presupuestario Federal para el Ejercicio Fiscal 2025</h4>
         <div class="timeline-item">
@@ -1522,7 +1603,7 @@
             <p><strong>Cámara de Diputados aprueba:</strong> El Decreto de Presupuesto de Egresos de la Federación. Este es el documento final que autoriza el gasto para el siguiente año, incluyendo las asignaciones para su entidad. <span class="highlight">(Práctica Normada: <a href="https://www.ordenjuridico.gob.mx/Constitucion/cn16.pdf#page=39" target="_blank">Art. 74, Fracción IV, CPEUM</a>)</span></p>
         </div>
         <div class="timeline-item">
-            <div class="timeline-date">Últimos días de diciembre (del año anterior al ejercicio fiscal)</div>
+            <div class="timeline-date">24 de diciembre (del año anterior al ejercicio fiscal)</div>
             <p><strong>Publicación en el Diario Oficial de la Federación (DOF):</strong> La <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LIF.pdf" target="_blank">Ley de Ingresos</a> y el Decreto de Presupuesto de Egresos. La publicación oficial marca el inicio de la validez del presupuesto. <span class="highlight">(Práctica Normada: Art. 55 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=23" target="_blank">LFPRH</a>)</span></p>
         </div>
         <div class="timeline-item">
@@ -1534,15 +1615,17 @@
         </div>
     </div>
 
+    <!-- Caja de advertencia sobre implicaciones para entidades de nueva creación en el cronograma -->
     <div class="warning-box" role="region" aria-labelledby="implicaciones-entidades-nueva-creacion">
         <h4 id="implicaciones-entidades-nueva-creacion">Implicaciones para Entidades de Nueva Creación en el Cronograma</h4>
-        <p>Para su entidad paraestatal de nueva creación, la atención a este cronograma es doblemente crítica. La oportunidad en la presentación de su anteproyecto y la recepción del presupuesto aprobado determinarán directamente el inicio de sus operaciones con recursos públicos. Cualquier retraso en la aprobación o comunicación puede implicar operar con presupuestos provisionales, lo que limita la ejecución de programas, o requerir adecuaciones presupuestarias posteriores, que pueden ser procesos complejos. Planificar con anticipación es clave. <span class="highlight">(Sugerencia IA, buena práctica de gestión)</span></p>
+        <p>Para su entidad paraestatal de nueva creación, la atención a este cronograma es doblemente crítica. La oportunidad en la presentación de su anteproyecto y la recepción del presupuesto aprobado determinarán directamente el inicio de sus operaciones con recursos públicos. Cualquier retraso en la aprobación o comunicación puede implicar operar con presupuestos provisionales, lo que limita la ejecución de programas, o requerir adecuaciones presupuestarias posteriores, que pueden ser procesos complejos. Planificar con anticipación es clave. <span class="highlight">(Práctica Normada: Art. 46 LFPRH, implica la necesidad de planeación para cumplir plazos)</span></p>
     </div>
 
     <h3 id="subseccion-4-6-2">4.6.2 Procesos de Ajuste y Validación Interna del Presupuesto Aprobado</h3>
 
     <p>Una vez que el PEF es aprobado por la Cámara de Diputados y publicado en el DOF, la SHCP comunica los calendarios de presupuesto a cada dependencia y entidad. En este punto, pueden presentarse ajustes respecto al anteproyecto original que su entidad había enviado, debido a decisiones legislativas o ajustes macroeconómicos. Esto requiere un proceso diligente de validación y, si es necesario, ajustes internos por parte de su entidad paraestatal para asegurar que la planeación se alinee con los recursos finalmente autorizados.</p>
 
+    <!-- Concepto de Comunicación de Calendarios de Presupuesto y su Impacto -->
     <div class="concept-box" role="region" aria-labelledby="comunicacion-calendarios-presupuesto">
         <h4 id="comunicacion-calendarios-presupuesto">Comunicación de Calendarios de Presupuesto y su Impacto en su Entidad</h4>
         <p>La SHCP, a través de la Unidad de Política y Control Presupuestario (UPCP), comunica formalmente a cada entidad los montos y calendarios mensuales autorizados para el ejercicio fiscal. Estos calendarios son el marco vinculante para el ejercicio del gasto de su entidad, y su cumplimiento es obligatorio. <span class="highlight">(Práctica Normada: Art. 55 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=23" target="_blank">LFPRH</a>)</span></p>
@@ -1550,7 +1633,7 @@
         <ul style="margin: 2mm 0; padding-left: 5mm;">
             <li><strong>Análisis de Discrepancias:</strong> Compare de inmediato el presupuesto aprobado con el anteproyecto que su entidad presentó. Identifique cualquier reducción o ajuste en programas o capítulos de gasto.</li>
             <li><strong>Reajuste Interno (si aplica):</strong> Si hay reducciones significativas, su entidad deberá realizar ajustes en las metas físicas de sus programas o en la composición del gasto, priorizando las actividades sustantivas que son clave para su misión.</li>
-            <li><strong>Comunicación Interna y Transparencia:</strong> Informe a todas las áreas internas de su entidad sobre el presupuesto definitivo y los calendarios específicos que deberán seguir. La transparencia interna es fundamental. <span class="highlight">(Sugerencia IA, buena práctica de gobernanza)</span></li>
+            <li><strong>Comunicación Interna y Transparencia:</strong> Informe a todas las áreas internas de su entidad sobre el presupuesto definitivo y los calendarios específicos que deberán seguir. La transparencia interna es fundamental. <span class="highlight">(Práctica Normada: Art. 134 CPEUM, implícita en los principios de eficiencia y transparencia)</span></li>
             <li><strong>Ajustes de la Programación:</strong> Modifique, si es necesario, el <a href="#concepto-poa">Programa Operativo Anual (POA)</a> y las metas de la <a href="#definicion-mir">Matriz de Indicadores para Resultados (MIR)</a> para reflejar el presupuesto finalmente aprobado. La coherencia entre su planeación y su presupuesto es crucial.</li>
             <li><strong>Registro en Sistemas Financieros:</strong> Actualice de inmediato los sistemas de información financiera y presupuestaria de su entidad con los montos y calendarios autorizados, lo cual es vital para el control y el ejercicio del gasto. <span class="highlight">(Práctica Normada: Art. 56 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=23" target="_blank">LFPRH</a>)</span></li>
         </ul>
@@ -1559,6 +1642,7 @@
         </div>
     </div>
 
+    <!-- Diagrama de flujo del Flujo de Ajuste y Validación Interna del Presupuesto Aprobado -->
     <div class="process-diagram" role="region" aria-labelledby="flujo-ajuste-validacion">
         <h4 id="flujo-ajuste-validacion">Flujo de Ajuste y Validación Interna del Presupuesto Aprobado en su Entidad</h4>
         <p>Este diagrama muestra los pasos que su entidad deberá seguir para gestionar el presupuesto una vez aprobado:</p>
@@ -1578,11 +1662,12 @@
         </div>
     </div>
 
+    <!-- Ejemplo práctico de Ajuste Presupuestal -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-ajuste-presupuestal-energias-renovables">
         <h4 id="ejemplo-ajuste-presupuestal-energias-renovables">Ejemplo Práctico: Ajuste Presupuestal (Instituto Nacional de Energías Renovables - Ficticio)</h4>
         <p>Consideremos el <strong>Instituto Nacional de Energías Renovables</strong>:</p>
-        <p><strong>Situación:</strong> El anteproyecto del Instituto contemplaba $10 millones para la adquisición de equipo especializado (Capítulo 5000), pero el presupuesto aprobado reduce este monto a $7 millones, debido a una reasignación general de recursos. <span class="highlight">(Error común en la asignación final de PEF)</span></p>
-        <p><strong>Acción de la Entidad:</strong> La dirección de Planeación y Finanzas del Instituto, en coordinación con el área técnica de investigación, decide posponer la adquisición de un equipo menos crítico para el siguiente ejercicio fiscal, manteniendo la compra del equipo esencial que permite continuar con los proyectos de mayor prioridad. Se actualizan las metas físicas del Programa de Investigación y Desarrollo para reflejar esta decisión, por ejemplo, ajustando el número de experimentos a realizar sin el equipo pospuesto. <span class="highlight">(Recomendación IA, buena práctica de gestión ante recortes)</span></p>
+        <p><strong>Situación:</strong> El anteproyecto del Instituto contemplaba $10 millones para la adquisición de equipo especializado (Capítulo 5000), pero el presupuesto aprobado reduce este monto a $7 millones, debido a una reasignación general de recursos. <span class="highlight">(Práctica Normada: Art. 47 LFPRH, las asignaciones finales pueden diferir del anteproyecto)</span></p>
+        <p><strong>Acción de la Entidad:</strong> La dirección de Planeación y Finanzas del Instituto, en coordinación con el área técnica de investigación, decide posponer la adquisición de un equipo menos crítico para el siguiente ejercicio fiscal, manteniendo la compra del equipo esencial que permite continuar con los proyectos de mayor prioridad. Se actualizan las metas físicas del Programa de Investigación y Desarrollo para reflejar esta decisión, por ejemplo, ajustando el número de experimentos a realizar sin el equipo pospuesto. <span class="highlight">(Práctica Normada: Art. 56 LFPRH, la entidad debe ajustar su programación a los recursos autorizados)</span></p>
         <p><strong>Comunicación:</strong> Se informa a los investigadores involucrados sobre el ajuste y sus implicaciones. Además, se actualiza el <a href="#concepto-poa">POA</a> y la <a href="#definicion-mir">MIR</a> del programa en los sistemas internos del Instituto, asegurando que todos los documentos operativos reflejen la realidad presupuestaria.</p>
     </div>
 
@@ -1594,6 +1679,7 @@
 
     <p>Los proyectos de inversión que su entidad proponga y que requieran recursos del Presupuesto de Egresos de la Federación deben ser registrados en la Cartera de Proyectos de Inversión. Esta Cartera es gestionada principalmente por la Unidad de Inversiones de la Secretaría de Hacienda y Crédito Público (SHCP). En algunos casos, la coordinación puede ser con organismos sectoriales especializados, como el CONACYT para proyectos de ciencia y tecnología, o el INIFED para infraestructura educativa, quienes emitirán opiniones técnicas específicas.</p>
 
+    <!-- Concepto de Proyectos de Inversión -->
     <div class="concept-box" role="region" aria-labelledby="proyectos-inversion-definicion">
         <h4 id="proyectos-inversion-definicion">¿Qué son los Proyectos de Inversión?</h4>
         <p>Son todas aquellas erogaciones que generan un beneficio social, que incrementan la capacidad de producción o de provisión de bienes y servicios públicos, o que prolongan la vida útil de los activos existentes. Es importante destacar que no son gastos corrientes (operación diaria), sino que implican la adquisición o creación de capital fijo o de infraestructura. Para su entidad, identificar y clasificar correctamente estos proyectos es el primer paso para su registro.</p>
@@ -1602,41 +1688,44 @@
         </div>
     </div>
 
+    <!-- Lista de Verificación de Documentos y Requisitos Generales para el Registro de Proyectos de Inversión -->
     <div class="checklist" role="region" aria-labelledby="documentos-requisitos-proyectos-inversion">
         <h4 id="documentos-requisitos-proyectos-inversion">Documentos y Requisitos Generales para el Registro de Proyectos de Inversión</h4>
         <p>La documentación necesaria es extensa y rigurosa, para asegurar la pertinencia y viabilidad de la inversión. Su entidad deberá preparar, entre otros, los siguientes:</p>
         <ul>
-            <li>✓ <strong>Estudio de Preinversión:</strong> Un análisis exhaustivo (de mercado, técnico, económico, financiero, ambiental y legal) que demuestre la viabilidad y rentabilidad social del proyecto. Este estudio es la base de la justificación del proyecto. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la CPI)</span></li>
+            <li>✓ <strong>Estudio de Preinversión:</strong> Un análisis exhaustivo (de mercado, técnico, económico, financiero, ambiental y legal) que demuestre la viabilidad y rentabilidad social del proyecto. Este estudio es la base de la justificación del proyecto. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
             <li>✓ <strong>Matriz de Marco Lógico (MML) del Proyecto:</strong> Una versión específica de la MML para el proyecto de inversión, detallando sus objetivos, indicadores, medios de verificación y supuestos específicos. <span class="highlight">(Práctica Normada: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></li>
-            <li>✓ <strong>Análisis Costo-Beneficio o Costo-Efectividad:</strong> Una evaluación que justifique la inversión desde una perspectiva social, demostrando que los beneficios superan los costos o que es la alternativa más eficiente. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>, Lineamientos para el Registro en la CPI)</span></li>
+            <li>✓ <strong>Análisis Costo-Beneficio o Costo-Efectividad:</strong> Una evaluación que justifique la inversión desde una perspectiva social, demostrando que los beneficios superan los costos o que es la alternativa más eficiente. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>, Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
             <li>✓ <strong>Alineación al PND y Programas Sectoriales:</strong> Demostrar cómo el proyecto contribuye directamente a las prioridades nacionales y sectoriales de México. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>)</span></li>
-            <li>✓ <strong>Formato Único de Registro (FUR):</strong> El documento oficial de la SHCP para el registro de proyectos, que sintetiza la información clave. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la CPI)</span></li>
-            <li>✓ <strong>Opiniones Técnicas Sectoriales:</strong> Dictámenes de las secretarías rectoras del sector (ej. SEMARNAT para impacto ambiental, SENER para energía), que avalen la pertinencia técnica del proyecto. <span class="highlight">(Sugerencia IA, buena práctica de coordinación interinstitucional)</span></li>
-            <li>✓ <strong>Calendario de Ejecución y Flujo de Inversión:</strong> Un cronograma detallado de actividades y el flujo de inversión proyectado, incluyendo la inversión plurianual si aplica. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la CPI)</span></li>
+            <li>✓ <strong>Formato Único de Registro (FUR):</strong> El documento oficial de la SHCP para el registro de proyectos, que sintetiza la información clave. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
+            <li>✓ <strong>Opiniones Técnicas Sectoriales:</strong> Dictámenes de las secretarías rectoras del sector (ej. SEMARNAT para impacto ambiental, SENER para energía), que avalen la pertinencia técnica del proyecto. <span class="highlight">(Práctica Normada: Art. 34 LFPRH, implícito en la evaluación de la viabilidad)</span></li>
+            <li>✓ <strong>Calendario de Ejecución y Flujo de Inversión:</strong> Un cronograma detallado de actividades y el flujo de inversión proyectado, incluyendo la inversión plurianual si aplica. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
         </ul>
         <div class="legal-ref">
             Referencia: <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a> y <a href="https://www.shcp.gob.mx/LigasPDF/Oficio_Circular_Unico.pdf" target="_blank">Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP</a>.
         </div>
     </div>
 
+    <!-- Ejemplo de Proyecto de Inversión -->
     <div class="example-box" role="region" aria-labelledby="ejemplo-proyecto-inversion-biotecnologia">
         <h4 id="ejemplo-proyecto-inversion-biotecnologia">Ejemplo: Proyecto de Inversión para el "Instituto Nacional de Desarrollo Tecnológico" (Ficticio)</h4>
         <p>Consideremos el <strong>Instituto Nacional de Desarrollo Tecnológico</strong> y su propuesta de un proyecto de inversión:</p>
         <p><strong>Nombre del Proyecto:</strong> "Construcción y Equipamiento de Laboratorio Nacional de Biotecnología"</p>
         <p><strong>Justificación:</strong> El proyecto busca aumentar significativamente la capacidad de investigación en biotecnología en México, lo cual se alinea directamente al objetivo del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> de "Fortalecer la capacidad científica y tecnológica nacional para la soberanía y el desarrollo".</p>
-        <p><strong>Requisitos Específicos:</strong> Además de los documentos generales, el Instituto deberá solicitar opiniones técnicas de la Secretaría de Salud (en materia de bioseguridad) y del CONACYT (para validar la pertinencia de la infraestructura científica). <span class="highlight">(Sugerencia IA, buena práctica de coordinación)</span></p>
+        <p><strong>Requisitos Específicos:</strong> Además de los documentos generales, el Instituto deberá solicitar opiniones técnicas de la Secretaría de Salud (en materia de bioseguridad) y del CONACYT (para validar la pertinencia de la infraestructura científica). <span class="highlight">(Práctica Normada: Art. 34 LFPRH, implícito en la evaluación de viabilidad del proyecto)</span></p>
         <p><strong>Costo Estimado y Plurianualidad:</strong> El costo total del proyecto se estima en $200 millones, a ejecutar en 3 ejercicios fiscales, lo que implica una planeación plurianual de recursos. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>)</span></p>
     </div>
 
+    <!-- Caja de advertencia sobre errores críticos a evitar en el registro de proyectos -->
     <div class="warning-box" role="region" aria-labelledby="errores-criticos-registro-proyectos">
         <h4 id="errores-criticos-registro-proyectos">Errores Críticos a Evitar en el Registro de Proyectos de Inversión</h4>
         <p>El proceso de registro es complejo y los errores pueden significar el rechazo de su proyecto. Preste especial atención a estos puntos:</p>
         <ul style="margin: 2mm 0; padding-left: 5mm;">
-            <li><strong>1. Falta de Estudios de Preinversión Sólidos:</strong> Presentar proyectos sin un respaldo técnico y económico suficiente es un error grave. La SHCP y los organismos evaluadores exigen estudios rigurosos que demuestren la viabilidad. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la CPI)</span></li>
-            <li><strong>2. Inconsistencia Documental:</strong> Que la información en el Formato Único de Registro (FUR) no coincida con los estudios de preinversión o las justificaciones técnicas. Cualquier discrepancia generará observaciones. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la CPI)</span></li>
-            <li><strong>3. Incumplimiento Normativo:</strong> No obtener las opiniones sectoriales o autorizaciones requeridas por la ley para el tipo de proyecto. Por ejemplo, construir sin un dictamen de impacto ambiental. <span class="highlight">(Práctica Normada: Normativa sectorial aplicable)</span></li>
-            <li><strong>4. Metas y Tiempos Irrealistas:</strong> Proyectar resultados o tiempos de ejecución que son poco realistas para el alcance del proyecto. La sobreestimación puede llevar a subejercicios o proyectos inconclusos. <span class="highlight">(Sugerencia IA, buena práctica de gestión de proyectos)</span></li>
-            <li><strong>5. Desalineación con Prioridades Nacionales:</strong> Proyectos que no demuestran claramente su contribución a los objetivos nacionales del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND</a> o a las metas de los programas sectoriales serán rechazados por falta de pertinencia. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>)</span></li>
+            <li><strong>1. Falta de Estudios de Preinversión Sólidos:</strong> Presentar proyectos sin un respaldo técnico y económico suficiente es un error grave. La SHCP y los organismos evaluadores exigen estudios rigurosos que demuestren la viabilidad. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
+            <li><strong>2. Inconsistencia Documental:</strong> Que la información en el Formato Único de Registro (FUR) no coincida con los estudios de preinversión o las justificaciones técnicas. Cualquier discrepancia generará observaciones. <span class="highlight">(Práctica Normada: Lineamientos para el Registro en la Cartera de Proyectos de Inversión de la SHCP)</span></li>
+            <li><strong>3. Incumplimiento Normativo:</strong> No obtener las opiniones sectoriales o autorizaciones requeridas por la ley para el tipo de proyecto. Por ejemplo, construir sin un dictamen de impacto ambiental. <span class="highlight">(Práctica Normada: Normativa sectorial aplicable, ej. Ley General del Equilibrio Ecológico y la Protección al Ambiente)</span></li>
+            <li><strong>4. Metas y Tiempos Irrealistas:</strong> Proyectar resultados o tiempos de ejecución que son poco realistas para el alcance del proyecto. La sobreestimación puede llevar a subejercicios o proyectos inconclusos. <span class="highlight">(Práctica Normada: Art. 34 LFPRH, implícito en la viabilidad técnica y económica)</span></li>
+            <li><strong>5. Desalineación con Prioridades Nacionales:</strong> Proyectos que no demuestran claramente su contribución a los objetivos nacionales del <a href="https://www.gob.mx/presidencia/documentos/plan-nacional-de-desarrollo-2025-2030-391771" target="_blank">PND 2025-2030</a> o a las metas de los programas sectoriales serán rechazados por falta de pertinencia. <span class="highlight">(Práctica Normada: Art. 34 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=15" target="_blank">LFPRH</a>)</span></li>
         </ul>
     </div>
 
@@ -1644,6 +1733,7 @@
 
     <p>El proceso de inscripción de un proyecto de inversión en la Cartera es riguroso y busca asegurar la pertinencia y viabilidad de las inversiones públicas. Una vez inscrito, el proyecto es objeto de seguimiento continuo, lo que implica una responsabilidad constante por parte de su entidad paraestatal.</p>
 
+    <!-- Diagrama de flujo del Flujo de Inscripción y Seguimiento en la Cartera de Proyectos de Inversión -->
     <div class="process-diagram" role="region" aria-labelledby="flujo-inscripcion-cartera-proyectos">
         <h4 id="flujo-inscripcion-cartera-proyectos">Flujo de Inscripción y Seguimiento en la Cartera de Proyectos de Inversión</h4>
         <p>Este es el camino que su proyecto seguirá para ser parte de la Cartera de Inversión Federal:</p>
@@ -1665,6 +1755,7 @@
         </div>
     </div>
 
+    <!-- Concepto de Seguimiento Obligatorio de Proyectos de Inversión -->
     <div class="concept-box" role="region" aria-labelledby="seguimiento-proyectos-inversion">
         <h4 id="seguimiento-proyectos-inversion">Seguimiento Obligatorio de Proyectos de Inversión para su Entidad</h4>
         <p>Una vez que un proyecto es inscrito y se le asigna una clave en la Cartera de Proyectos de Inversión, la entidad deberá reportar periódicamente sus avances físicos y financieros a la SHCP. Este seguimiento asegura que la inversión se ejecute de acuerdo con lo planeado, se logren los beneficios esperados y se cumpla con la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=23" target="_blank">LFPRH</a>. La transparencia y la rendición de cuentas son fundamentales en esta etapa.</p>
@@ -1679,6 +1770,7 @@
         </div>
     </div>
 
+    <!-- Lista de Verificación de Seguimiento Efectivo de Proyectos de Inversión -->
     <div class="checklist" role="region" aria-labelledby="lista-seguimiento-proyectos-inversion">
         <h4 id="lista-seguimiento-proyectos-inversion">Lista de Verificación: Seguimiento Efectivo de Proyectos de Inversión</h4>
         <p>Para garantizar un seguimiento eficaz de sus proyectos de inversión, su entidad debe asegurar lo siguiente:</p>
@@ -1693,7 +1785,7 @@
         <p class="no-indent"><span class="highlight">(Práctica Normada: Art. 56 <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=23" target="_blank">LFPRH</a> y <a href="https://www.gob.mx/cms/uploads/attachment/file/959219/Manual_de_Programacion_y_Presupuesto_2025.pdf" target="_blank">Manual de Programación y Presupuesto PEF 2025</a>)</span></p>
     </div>
 
-    <!-- Glosario -->
+    <!-- Glosario de Términos -->
     <h1 id="glosario" style="page-break-before: always;">Glosario de Términos</h1>
     <div class="concept-box no-indent" style="border-left: 4px solid #8B4513;">
         <h4>Actividad Institucional</h4>
@@ -1726,6 +1818,9 @@
         <h4>CONAC (Consejo Nacional de Armonización Contable)</h4>
         <p class="no-indent">Órgano intergubernamental responsable de emitir las normas contables para el sector público en México. <span class="legal-ref">(Fuente: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LGCG.pdf#page=1" target="_blank">Ley General de Contabilidad Gubernamental</a>)</span></p>
 
+        <h4>CONEVAL (Consejo Nacional de Evaluación de la Política de Desarrollo Social)</h4>
+        <p class="no-indent">Organismo encargado de emitir los lineamientos y metodologías para la evaluación del desempeño de programas y políticas públicas. <span class="legal-ref">(Fuente: <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">CONEVAL, Lineamientos y Manuales</a>)</span></p>
+
         <h4>Cuenta Pública</h4>
         <p class="no-indent">Informe anual que el Ejecutivo Federal presenta al Congreso, conteniendo la información contable, presupuestaria, programática y económica del ejercicio fiscal concluido. <span class="legal-ref">(Fuente: <a href="https://www.ordenjuridico.gob.mx/Constitucion/cn16.pdf#page=39" target="_blank">CPEUM, Art. 74, Fracción VI</a>)</span></p>
 
@@ -1739,7 +1834,7 @@
         <p class="no-indent">Organización de las actividades del sector público en programas para vincular el gasto con los objetivos de las políticas públicas. <span class="legal-ref">(Fuente: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=18" target="_blank">LFPRH, Art. 42</a>)</span></p>
 
         <h4>Indicadores de Desempeño</h4>
-        <p class="no-indent">Instrumentos de medición que proporcionan información cuantitativa sobre el logro de objetivos y resultados de programas y proyectos. Se clasifican en estratégicos y de gestión. <span class="legal-ref">(Fuente: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Art. 27</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos CONEVAL</a>)</span></p>
+        <p class="no-indent">Instrumentos de medición que proporcionan información cuantitativa sobre el logro de objetivos y resultados de programas y proyectos. Se clasifican en estratégicos y de gestión. <span class="legal-ref">(Fuente: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LPRH.pdf#page=11" target="_blank">LFPRH, Art. 27</a>; <a href="https://www.coneval.org.mx/Evaluacion/Paginas/Lineamientos_y_Manuales.aspx" target="_blank">Lineamientos de Evaluación del Desempeño del CONEVAL</a>)</span></p>
 
         <h4>INIFED (Instituto Nacional de la Infraestructura Física Educativa)</h4>
         <p class="no-indent">Organismo público encargado de regular y normar la infraestructura física educativa en México (ejemplo de organismo que valida proyectos de inversión en su sector). <span class="legal-ref">(Fuente: <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf#page=12" target="_blank">LOAPF, Art. 38</a>)</span></p>
